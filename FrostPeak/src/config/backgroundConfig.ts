@@ -12,9 +12,6 @@ const backgroundConfig = {
       size: {
         value: 3,
       },
-      move: {
-        direction: 'bottom',
-      },
       opacity: {
         value: 0.5,
       },

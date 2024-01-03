@@ -3,6 +3,8 @@ import { NavMenu } from '../NavMenu/NavMenu'
 
 export const Header = () => {
   return (
-    <NavMenu />
+    <>
+     <NavMenu />
+    </>
   )
 }
