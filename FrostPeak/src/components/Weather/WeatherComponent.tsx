@@ -20,7 +20,7 @@ const WeatherComponent = () => {
         const data = await fetchWeatherInfo();
         setWeatherInfo(data);
       } catch (error) {
-        console.log("Error with weather info");
+        console.log("Error with weather fetching");
         
       }
     };
@@ -32,10 +32,22 @@ const WeatherComponent = () => {
     <div className="bg-black w-80 mx-auto p-4 rounded-3xl">
       {weatherInfo && (
         <div>
-          <h2 className="font-bold text-white"><TiWeatherCloudy className="inline-block mr-2" /> Current Weather</h2>
-          <p className="text-white"><FaTemperatureLow className="inline-block mr-2" /> Temperature: {weatherInfo.current.temperature2m} °C</p>
-          <p className="text-white"><TiWeatherSnow className="inline-block mr-2" /> Snowfall: {weatherInfo.current.snowfall} mm</p>
-          <p className="text-white"><TiWeatherWindyCloudy className="inline-block mr-2" /> Wind Speed: {weatherInfo.current.windSpeed10m} m/s</p>
+          <h2 className="font-bold text-white">
+            <TiWeatherCloudy className="inline-block mr-2" /> 
+            Current Weather
+          </h2>
+          <p className="text-white">
+            <FaTemperatureLow className="inline-block mr-2" /> 
+            Temperature: {weatherInfo.current.temperature2m} °C
+          </p>
+          <p className="text-white">
+            <TiWeatherSnow className="inline-block mr-2" /> 
+            Snowfall: {weatherInfo.current.snowfall} mm
+          </p>
+          <p className="text-white">
+            <TiWeatherWindyCloudy className="inline-block mr-2" /> 
+            Wind Speed: {weatherInfo.current.windSpeed10m} m/s
+          </p>
         </div>
       )}
     </div>
