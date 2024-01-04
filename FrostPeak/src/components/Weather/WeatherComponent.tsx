@@ -32,7 +32,7 @@ const WeatherComponent = () => {
     <div className="bg-black w-80 mx-auto p-4 rounded-3xl">
       {weatherInfo && (
         <div>
-          <h2 className="font-bold text-white">
+          <h2 className="font-bold text-white mb-5">
             <TiWeatherCloudy className="inline-block mr-2" /> 
             Current Weather
           </h2>
