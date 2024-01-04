@@ -32,7 +32,7 @@ const fetchWeatherInfo = async () => {
 
     return weatherData;
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    console.error("Error with fetching weather", error);
     throw error;
   }
 };
