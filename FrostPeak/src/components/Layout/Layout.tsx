@@ -1,21 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header'; 
-import { Footer } from '../Footer/Footer'; 
+import Footer from '../Footer/Footer'; 
 import { AnimatedBackground } from '../Background/AnimatedBackground'
 
 export const Layout = () => {
     return (
       <>
-        <header>
-          <Header />
-        </header>
+        <Header />
         <main>
           <AnimatedBackground />
           <Outlet />
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </>
   );
 };
