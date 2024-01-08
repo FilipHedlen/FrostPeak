@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
     return (
+    <div>
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <div className="text-center mb-96">
           <h1 className="text-6xl font-bold text-gray-800 mb-4">Oops!</h1>
@@ -16,6 +17,7 @@ const NotFoundPage = () => {
         </div>
         <p className="text-gray-600">&copy; 2024 FrostPeak Explorer. All rights reserved.</p>
       </div>
+    </div>
     );
   };
   
