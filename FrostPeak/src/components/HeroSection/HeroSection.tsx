@@ -7,8 +7,8 @@ const HeroSection = () => {
         <section className="hero bg-hero relative h-screen bg-cover bg-center overflow-y-hidden">
         <div className="hero-overlay absolute inset-0 bg-black opacity-50"></div>
         <div className="hero-content text-center text-white absolute inset-0 flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-4">Welcome to Ramundberget!</h1>
-          <p className="text-lg mb-8">Discover the beauty of our slopes and locations.</p>
+          <h1 className="text-4xl font-bold mb-4 font-playfair">Welcome to Ramundberget!</h1>
+          <p className="text-lg mb-8 font-poppins">Discover the beauty of our slopes and locations.</p>
           <div className="mb-60">
             <Link to="/locations" className="text-white font-bold">
               Explore

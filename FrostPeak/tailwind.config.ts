@@ -8,7 +8,12 @@ export default {
     extend: {
         backgroundImage: {
             "hero": "url('/bg-hero.jpg')",
-            "overall": "url('/bg-overall.png')"
+            "overall": "url('/bg-overall.png')",
+        },
+        fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            nunito: ['Nunito', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
         }
     },
   },
