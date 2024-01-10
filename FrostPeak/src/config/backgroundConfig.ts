@@ -32,8 +32,12 @@ export const particleOptions: ISourceOptions = {
   },
   background: {
     color: {
-      value: "#00008B",
+        value: "transparent",
     },
+    image: "url('/bg-overall.png')",
+    position: "50% 50%",
+    repeat: "no-repeat",
+    size: "cover",
   },
 };
 
