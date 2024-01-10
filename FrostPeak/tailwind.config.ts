@@ -14,7 +14,7 @@ export default {
             playfair: ['Playfair Display', 'serif'],
             nunito: ['Nunito', 'sans-serif'],
             poppins: ['Poppins', 'sans-serif'],
-        }
+        },
     },
   },
   plugins: [],
