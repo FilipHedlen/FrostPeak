@@ -1,17 +1,18 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header'; 
 import Footer from '../Footer/Footer'; 
-import { AnimatedBackground } from '../Background/AnimatedBackground'
+//import { AnimatedBackground } from '../Background/AnimatedBackground'
 
-export const Layout = () => {
+const Layout = () => {
     return (
       <>
         <Header />
-        <main>
-          <AnimatedBackground />
-          <Outlet />
+        <main className="relative">
+         <Outlet />
         </main>
         <Footer />
       </>
   );
 };
+
+export default Layout;
