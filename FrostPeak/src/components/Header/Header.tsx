@@ -1,10 +1,14 @@
-import React from 'react'
-import { NavMenu } from '../NavMenu/NavMenu'
+import NavMenu from '../NavMenu/NavMenu';
 
-export const Header = () => {
+const Header = () => {
   return (
-    <>
-     <NavMenu />
-    </>
-  )
-}
+    <header className="bg-blue-800 text-white py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-2xl font-bold">FrostPeak Explorer</div>
+        <NavMenu />
+      </div>
+    </header>
+  );
+};
+
+export default Header;
