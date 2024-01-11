@@ -6,6 +6,20 @@ Configuration for the snowflake animated background.
 
 import { ISourceOptions } from "@tsparticles/engine";
 
+
+const responsiveBackground = () => {
+    const width = window.innerWidth;
+  
+    if (width <= 640) {
+      return "url('/bg-mobile.png')";
+    } else if (width > 640 && width <= 1024) {
+      return "url('/bg-tablet.png')";
+    } else {
+      return "url('/bg-desktop.png')";
+    }
+};
+
+
 export const particleOptions: ISourceOptions = {
   particles: {
     color: {
@@ -32,8 +46,12 @@ export const particleOptions: ISourceOptions = {
   },
   background: {
     color: {
-      value: "#00008B",
+      value: "transparent",
     },
+    image: responsiveBackground(), // My try to get the background img responsive
+    position: "50% 50%",
+    repeat: "no-repeat",
+    size: "cover",
   },
 };
 

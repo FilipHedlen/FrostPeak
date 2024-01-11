@@ -21,13 +21,13 @@ const fetchWeatherInfo = async () => {
     const current = response.current()!;
 
     const weatherData = {
-      current: {
-        time: new Date((Number(current.time()) + utcOffsetSeconds) * 1000),
-        temperature2m: current.variables(0)!.value(),
-        snowfall: current.variables(1)!.value(),
-        windSpeed10m: current.variables(2)!.value(),
-        windDirection10m: current.variables(3)!.value(),
-      }
+        current: {
+          time: new Date((Number(current.time()) + utcOffsetSeconds) * 1000),
+          temperature2m: Math.round(current.variables(0)!.value()),
+          snowfall: Math.round(current.variables(1)!.value()),
+          windSpeed10m: Math.round(current.variables(2)!.value()),
+          windDirection10m: Math.round(current.variables(3)!.value()),
+        }
     };
 
     return weatherData;

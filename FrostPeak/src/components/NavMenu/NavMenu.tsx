@@ -59,7 +59,7 @@ const NavMenu: React.FC = () => {
         </button>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} lg:flex lg:items-center lg:w-auto`}>
-        <ul className="lg:flex lg:space-x-4">
+        <ul className="lg:flex lg:space-x-4 font-nunito">
           <li>
             <Link to="/" onClick={() => handleLinkClick('/')}>
               Home

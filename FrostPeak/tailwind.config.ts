@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        backgroundImage: {
+            "overall": "url('/bg-overall.png')",
+            "hero": "url('/bg-hero.png')",
+        },
+        fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            nunito: ['Nunito', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+        },
+    },
   },
   plugins: [],
 } satisfies Config
