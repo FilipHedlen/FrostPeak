@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/react": "^3.0.0",
     "dotenv": "^16.3.1",
