@@ -8,6 +8,7 @@ export default {
     extend: {
         backgroundImage: {
             "overall": "url('/bg-overall.png')",
+            "hero": "url('/bg-hero.png')",
         },
         fontFamily: {
             playfair: ['Playfair Display', 'serif'],
