@@ -1,7 +1,13 @@
-export const initializePlacesAPI = () => {
-    if (window.google && window.google.maps && window.google.maps.places) {
-      console.log("Places API is initialized");
-    } else {
-      console.error("Places API is not initialized");
-    }
+import useGoogleAPIsHook from "../../hooks/googleAPI/googleAPI";
+
+const useGooglePlaces = () => {
+  const { isLoaded, loadError } = useGoogleAPIsHook();
+
+  if (loadError) {
+    console.error("Error with loading Google APIs", loadError);
+  }
+
+  return { isLoaded };
 };
+
+export default useGooglePlaces;

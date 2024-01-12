@@ -1,10 +1,10 @@
-import useGoogleMapsHook from "../../hooks/maps/useGoogleMaps";
+import useGoogleAPIsHook from "../../hooks/googleAPI/googleAPI";
 
 const useGoogleMaps = () => {
-  const { isLoaded, loadError } = useGoogleMapsHook();
+  const { isLoaded, loadError } = useGoogleAPIsHook();
 
   if (loadError) {
-    console.error("Error with loading Google Maps API", loadError);
+    console.error("Error with loading Google APIs", loadError);
   }
 
   return { isLoaded };
