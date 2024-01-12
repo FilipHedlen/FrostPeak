@@ -1,12 +1,13 @@
-import { useJsApiLoader } from '@react-google-maps/api';
+import useGoogleMapsHook from "../../hooks/maps/useGoogleMaps";
 
 const useGoogleMaps = () => {
-  const { isLoaded, loadError } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyCLHlbEFBZUvZ54kPIWU9wYMep9deh6NWA", // For now im keeping it here since my project is private and my env vite config isnt working
-  });
+  const { isLoaded, loadError } = useGoogleMapsHook();
 
-  return { isLoaded, loadError };
+  if (loadError) {
+    console.error("Error with loading Google Maps API", loadError);
+  }
+
+  return { isLoaded };
 };
 
 export default useGoogleMaps;
