@@ -22,7 +22,12 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
   }, [place]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80">
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80"
+        onClick={(e) => { // If the user clicks outside of the detailed view it closes
+            if (e.target === e.currentTarget) {
+            onClose();
+            }
+        }}>
       <div className="bg-white p-6 rounded-lg relative">
         <button
           className="absolute top-2 right-2 text-black text-3xl cursor-pointer"
