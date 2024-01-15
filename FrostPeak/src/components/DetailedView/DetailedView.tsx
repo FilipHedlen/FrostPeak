@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import MapContainer from "../Map/MapComponent";
 import { IoCloseSharp } from "react-icons/io5";
+import StarRating from "../StarRating/StarRating";
 
 interface DetailedViewProps {
   place: google.maps.places.PlaceResult;
@@ -37,7 +38,9 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
         </button>
         <h3 className="text-2xl font-bold mb-2">{place.name}</h3>
         <p className="mb-2">{place.vicinity}</p>
-        <p className="mb-4">{place.rating}</p>
+        <p className="mb-4">
+            <StarRating rating={place.rating || 0} />
+        </p>
         <MapContainer center={place.geometry?.location || { lat: 0, lng: 0 }} />
       </div>
     </div>

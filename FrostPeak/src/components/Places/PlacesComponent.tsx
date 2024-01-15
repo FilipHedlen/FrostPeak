@@ -18,8 +18,8 @@ const PlacesComponent = () => {
 
       const request = {
         location: new window.google.maps.LatLng(62.6667, 12.3833),
-        radius: 5000,
-        type: filter || "lodging, restaurants",
+        radius: 10000,
+        type: filter || "lodging, restaurants, cafe, parking, bar, gym",
       };
 
       service.nearbySearch(request, (results, status) => {
@@ -44,7 +44,11 @@ const PlacesComponent = () => {
         >
           <option value="all">All</option>
           <option value="lodging">Lodging</option>
+          <option value="parking">Parking</option>
           <option value="restaurants">Restaurants</option>
+          <option value="cafe">Cafes</option>
+          <option value="bar">Bars</option>
+          <option value="gym">Gyms</option>
         </select>
       </div>
       {isLoaded ? (
