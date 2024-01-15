@@ -36,7 +36,7 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
           <IoCloseSharp />
         </button>
         <h3 className="text-2xl font-bold mb-2">{place.name}</h3>
-        <p className="mb-2">{place.formatted_address}</p>
+        <p className="mb-2">{place.vicinity}</p>
         <p className="mb-4">{place.rating}</p>
         <MapContainer center={place.geometry?.location || { lat: 0, lng: 0 }} />
       </div>
