@@ -23,7 +23,7 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
   }, [place]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80"
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center overflow-auto items-center bg-black bg-opacity-80 z-50"
         onClick={(e) => { // If the user clicks outside of the detailed view it closes
             if (e.target === e.currentTarget) {
             onClose();
@@ -41,6 +41,13 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
         <p className="mb-4">
             <StarRating rating={place.rating || 0} />
         </p>
+        {place.photos && place.photos.length > 0 && (
+          <img
+            src={place.photos[0].getUrl({ maxWidth: 400, maxHeight: 400 })}
+            alt={place.name}
+            className="mb-4 rounded"
+          />
+        )}
         <MapContainer center={place.geometry?.location || { lat: 0, lng: 0 }} />
       </div>
     </div>
