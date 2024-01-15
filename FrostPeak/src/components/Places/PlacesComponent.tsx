@@ -2,19 +2,23 @@ import { useEffect, useState } from 'react';
 import useGooglePlaces from '../../services/places/placeService';
 import DetailedViewComponent from '../DetailedView/DetailedView';
 
-const PlacesComponent = () => { // For now i'm displaying a simple list of nearby locations which WORKS hallelujah
+const PlacesComponent = () => {
   const { isLoaded } = useGooglePlaces();
-  const [selectedPlace, setSelectedPlace] = useState<google.maps.places.PlaceResult | null>(null);
   const [places, setPlaces] = useState<google.maps.places.PlaceResult[]>([]);
+  const [selectedPlace, setSelectedPlace] = useState<google.maps.places.PlaceResult | null>(null);
+
+  const handleClose = () => {
+    setSelectedPlace(null);
+  };
 
   useEffect(() => {
     if (isLoaded) {
       const service = new window.google.maps.places.PlacesService(document.createElement('div'));
 
       const request = {
-        location: new window.google.maps.LatLng(62.6667, 12.3833), // Ramundbergets lat+long
-        radius: 5000, // Locations in a 5km radius
-        type: "lodging, restaurants", // Type of locations, for now I keep it to restaurants and lodging
+        location: new window.google.maps.LatLng(62.6667, 12.3833),
+        radius: 5000,
+        type: "lodging, restaurants",
       };
 
       service.nearbySearch(request, (results, status) => {
@@ -39,7 +43,7 @@ const PlacesComponent = () => { // For now i'm displaying a simple list of nearb
               </li>
             ))}
           </ul>
-          {selectedPlace && <DetailedViewComponent place={selectedPlace} />}
+          {selectedPlace && <DetailedViewComponent place={selectedPlace} onClose={handleClose} />}
         </div>
       ) : (
         <p>Loading Google APIs</p>
