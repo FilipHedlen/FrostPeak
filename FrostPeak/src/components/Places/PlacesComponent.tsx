@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import useGooglePlaces from '../../services/places/placeService';
+import DetailedViewComponent from '../DetailedView/DetailedView';
 
 const PlacesComponent = () => { // For now i'm displaying a simple list of nearby locations which WORKS hallelujah
   const { isLoaded } = useGooglePlaces();
+  const [selectedPlace, setSelectedPlace] = useState<google.maps.places.PlaceResult | null>(null);
   const [places, setPlaces] = useState<google.maps.places.PlaceResult[]>([]);
 
   useEffect(() => {
@@ -12,7 +14,7 @@ const PlacesComponent = () => { // For now i'm displaying a simple list of nearb
       const request = {
         location: new window.google.maps.LatLng(62.6667, 12.3833), // Ramundbergets lat+long
         radius: 5000, // Locations in a 5km radius
-        type: 'lodging, restaurants', // Type of locations, for now I keep it to restaurants and lodging
+        type: "lodging, restaurants", // Type of locations, for now I keep it to restaurants and lodging
       };
 
       service.nearbySearch(request, (results, status) => {
@@ -29,11 +31,16 @@ const PlacesComponent = () => { // For now i'm displaying a simple list of nearb
     <div>
       <h2>Nearby Places</h2>
       {isLoaded ? (
-        <ul>
-          {places.map((place) => (
-            <li key={place.place_id}>{place.name}</li>
-          ))}
-        </ul>
+        <div>
+          <ul>
+            {places.map((place) => (
+              <li key={place.place_id} onClick={() => setSelectedPlace(place)}>
+                {place.name}
+              </li>
+            ))}
+          </ul>
+          {selectedPlace && <DetailedViewComponent place={selectedPlace} />}
+        </div>
       ) : (
         <p>Loading Google APIs</p>
       )}

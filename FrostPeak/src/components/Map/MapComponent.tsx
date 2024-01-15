@@ -1,7 +1,12 @@
-import { GoogleMap } from '@react-google-maps/api';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 import useGoogleMaps from '../../services/maps/mapService';
 
-const MapContainer = () => { // For now this is a simple display of google maps (ramundberget) 
+interface MapContainerProps {
+    center: google.maps.LatLng | { lat: number; lng: number };
+    markerPosition?: google.maps.LatLng| undefined;
+}
+
+const MapContainer: React.FC<MapContainerProps> = ({ center, markerPosition }) => {
   const { isLoaded } = useGoogleMaps();
 
   if (!isLoaded) {
@@ -9,13 +14,15 @@ const MapContainer = () => { // For now this is a simple display of google maps 
   }
 
   const mapOptions = {
-    center: { lat: 62.6667, lng: 12.3833 }, // Lat and Long for Ramundberget ski resort, the zoom will be changed later
-    zoom: 10, // How zoomed in it should be, keeping at 10 for now
+    center: center as google.maps.LatLngLiteral,
+    zoom: 15,
   };
 
-  return ( // Will try to incorporate tailwind instead of regular JSX css beneath
-    <div style={{ height: '400px', width: '400px', margin: "0 auto"}}> 
-      <GoogleMap mapContainerStyle={{ height: '100%', width: '100%', borderRadius: "5%"}} center={mapOptions.center} zoom={mapOptions.zoom} />
+  return (
+    <div style={{ height: '400px', width: '400px', margin: '0 auto' }}>
+      <GoogleMap mapContainerStyle={{ height: '100%', width: '100%', borderRadius: '5%' }} {...mapOptions}>
+        {markerPosition && <Marker position={markerPosition} icon={{ path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW, scale: 5, strokeColor: 'red' }} />}
+      </GoogleMap>
     </div>
   );
 };
