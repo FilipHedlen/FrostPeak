@@ -6,12 +6,16 @@ interface ShowMoreProps {
 
 const ShowMoreComponent: React.FC<ShowMoreProps> = ({ onClick }) => {
   return (
-    <button
-      className="text-black mt-4 p-2 bg-white rounded hover:bg-amber-300"
-      onClick={onClick}
-    >
-      Show More
-    </button>
+    <div className="mb-4 mt-4">
+        <button
+          onClick={onClick}
+          className="flex max-w-sm sm:max-w-full bg-indigo-500 hover:bg-indigo-700 focus:outline-none text-white text-lg sm:text-xl uppercase font-bold shadow-md rounded-full mx-auto p-3 sm:p-5"
+        >
+        <div className="flex items-center justify-center sm:mr-2">
+          Show more
+        </div>
+        </button>
+    </div>
   );
 };
 
