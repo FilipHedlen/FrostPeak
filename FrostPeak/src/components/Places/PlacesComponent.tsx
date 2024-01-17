@@ -1,23 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 import useGooglePlaces from '../../services/places/placeService';
 import DetailedViewComponent from '../DetailedView/DetailedView';
 import ShowMoreComponent from '../ShowMore/ShowMore';
+import { PlacesReducer, PlacesState } from '../../reducers/PlacesReducer';
+import { ActionType } from '../../types/ActionTypes';
+
+const initialState: PlacesState = {
+  places: [],
+  selectedPlace: null,
+  filter: null,
+  displayedLocations: 5,
+};
 
 const PlacesComponent = () => {
   const { isLoaded } = useGooglePlaces();
-  const [places, setPlaces] = useState<google.maps.places.PlaceResult[]>([]);
-  const [selectedPlace, setSelectedPlace] = useState<google.maps.places.PlaceResult | null>(null);
-  const [filter, setFilter] = useState<string | null>(null);
-  const [displayedLocations, setDisplayedLocations] = useState<number>(6); // Adjust the default number of locations to display
-  const locationsToShow = places.slice(0, displayedLocations);
+  const [state, dispatch] = useReducer(PlacesReducer, initialState); 
 
   const handleClose = () => {
-    setSelectedPlace(null);
+    dispatch({ type: ActionType.SET_SELECTED_PLACE, payload: null });
   };
 
-  const handleShowMore = () => {
-    // Increase the number of displayed locations
-    setDisplayedLocations(displayedLocations + 5); // Adjust the number to display more or less locations
+  const showMoreHandler = () => {
+    dispatch({ type: ActionType.SET_DISPLAYED_LOCATIONS, payload: state.displayedLocations + 5 });
   };
 
   useEffect(() => {
@@ -27,18 +31,18 @@ const PlacesComponent = () => {
       const request = {
         location: new window.google.maps.LatLng(62.6667, 12.3833),
         radius: 10000,
-        type: filter || "lodging, restaurants, cafe, parking, bar, gym",
+        type: state.filter || "lodging, restaurants, cafe, parking, bar, gym",
       };
 
       service.nearbySearch(request, (results, status) => {
         if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-          setPlaces(results || []); 
+          dispatch({ type: ActionType.SET_PLACES, payload: results || [] });
         } else {
           console.error("Error fetching places", status);
         }
       });
     }
-  }, [isLoaded, filter]);
+  }, [isLoaded, state.filter]);
 
   return (
     <div className="text-center mt-10">
@@ -46,8 +50,8 @@ const PlacesComponent = () => {
       <div className="mb-4 flex justify-center">
         <label className="mr-2 text-white">Filter by:</label>
         <select
-          onChange={(e) => setFilter(e.target.value)}
-          value={filter || "all"}
+          onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
+          value={state.filter || "all"}
           className="p-2 border-gray-300 rounded"
         >
           <option value="all">All</option>
@@ -61,26 +65,24 @@ const PlacesComponent = () => {
       </div>
       {isLoaded ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {locationsToShow.map((place) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {state.places.slice(0, state.displayedLocations).map((place) => (
               <div
                 key={place.place_id}
                 className="bg-white p-2 rounded cursor-pointer hover:shadow-md"
-                onClick={() => setSelectedPlace(place)}
+                onClick={() => dispatch({ type: ActionType.SET_SELECTED_PLACE, payload: place })}
               >
                 <h3 className="text-base font-bold">{place.name}</h3>
                 <p className="text-sm">{place.vicinity}</p>
               </div>
             ))}
           </div>
-          {places.length > displayedLocations && (
-            <ShowMoreComponent onClick={handleShowMore} />
-          )}
+          <ShowMoreComponent showMore={showMoreHandler} />
         </>
       ) : (
         <p>Loading Google APIs</p>
       )}
-      {selectedPlace && <DetailedViewComponent place={selectedPlace} onClose={handleClose} />}
+      {state.selectedPlace && <DetailedViewComponent place={state.selectedPlace} onClose={handleClose} />}
     </div>
   );
 };
