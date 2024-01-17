@@ -46,13 +46,14 @@ const PlacesComponent = () => {
 
   return (
     <div className="text-center mt-10">
-      <h2 className="text-white font-bold">Nearby Locations</h2>
-      <div className="mb-4 flex justify-center">
-        <label className="mr-2 text-white">Filter by:</label>
+      <div className="flex justify-center items-center mb-4">
+        <h2 className="text-white font-bold mr-2">Nearby Locations</h2>
+        <span className="text-white">|</span>
+        <label className="ml-2 mr-2 text-white">Filter by:</label>
         <select
-          onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
-          value={state.filter || "all"}
-          className="p-2 border-gray-300 rounded"
+        onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
+        value={state.filter || "all"}
+        className="p-2 border-gray-300 rounded"
         >
           <option value="all">All</option>
           <option value="lodging">Lodging</option>
