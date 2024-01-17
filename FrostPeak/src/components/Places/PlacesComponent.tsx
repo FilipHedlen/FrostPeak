@@ -4,6 +4,7 @@ import DetailedViewComponent from '../DetailedView/DetailedView';
 import ShowMoreComponent from '../ShowMore/ShowMore';
 import { PlacesReducer, PlacesState } from '../../reducers/PlacesReducer';
 import { ActionType } from '../../types/ActionTypes';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const initialState: PlacesState = {
   places: [],
@@ -81,7 +82,7 @@ const PlacesComponent = () => {
           <ShowMoreComponent showMore={showMoreHandler} />
         </>
       ) : (
-        <p>Loading Google APIs</p>
+        <LoadingSpinner />
       )}
       {state.selectedPlace && <DetailedViewComponent place={state.selectedPlace} onClose={handleClose} />}
     </div>
