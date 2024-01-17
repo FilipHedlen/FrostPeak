@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import useGooglePlaces from '../../services/places/placeService';
 import DetailedViewComponent from '../DetailedView/DetailedView';
+import ShowMoreComponent from '../ShowMore/ShowMore';
 
 const PlacesComponent = () => {
   const { isLoaded } = useGooglePlaces();
@@ -73,12 +74,7 @@ const PlacesComponent = () => {
             ))}
           </div>
           {places.length > displayedLocations && (
-            <button
-              className="text-white mt-4 p-2 bg-blue-500 rounded hover:bg-blue-700"
-              onClick={handleShowMore}
-            >
-              Show More
-            </button>
+            <ShowMoreComponent onClick={handleShowMore} />
           )}
         </>
       ) : (
