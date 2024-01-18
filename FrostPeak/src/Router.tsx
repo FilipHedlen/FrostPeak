@@ -4,7 +4,7 @@ import HomePage from "./pages/Home/HomePage";
 import { ContactPage } from "./pages/Contact/ContactPage";
 import { LocationsPage } from "./pages/Locations/LocationsPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
-import { SlopePage } from "./pages/Slopes/SlopePage";
+import SlopePage  from "./pages/Slopes/SlopePage";
 import { InformationPage } from "./pages/Information/InformationPage";
 
 export const Router = createBrowserRouter([

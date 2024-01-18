@@ -1,8 +1,13 @@
-import React from 'react'
+import SkiSlopes from "../../components/SkiSlopes/SkiSlopes"
+import WeatherComponent from "../../components/Weather/WeatherComponent"
 
-export const SlopePage = () => {
+const SlopePage = () => {
   return (
-    <div>SlopePage</div>
+    <>
+      <WeatherComponent />
+      <SkiSlopes />
+    </>
+
   )
 }
 
