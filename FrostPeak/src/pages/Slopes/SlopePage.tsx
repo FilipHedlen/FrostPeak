@@ -3,10 +3,10 @@ import WeatherComponent from "../../components/Weather/WeatherComponent"
 
 const SlopePage = () => {
   return (
-    <>
+    <div>
       <WeatherComponent />
       <SkiSlopes />
-    </>
+    </div>
 
   )
 }
