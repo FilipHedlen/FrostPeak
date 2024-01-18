@@ -54,7 +54,7 @@ const PlacesComponent = () => {
         <select
         onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
         value={state.filter || "all"}
-        className="p-2 border-gray-300 rounded"
+        className="p-0.5 border-gray-300 rounded"
         >
           <option value="all">All</option>
           <option value="lodging">Lodging</option>
