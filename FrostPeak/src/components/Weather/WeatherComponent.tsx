@@ -29,7 +29,7 @@ const WeatherComponent = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-lg w-80 mx-auto p-4 rounded-3xl font-nunito">
+    <div className="bg-white shadow-lg w-52 mx-auto p-4 rounded-3xl font-nunito">
       {weatherInfo && (
         <div>
           <h2 className="font-bold text-gray-800 mb-5">
