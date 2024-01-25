@@ -13,8 +13,8 @@ const SlopeDifficulty = () => {
         <p className="text-xs sm:text-sm font-semibold ml-1">Easy</p>
       </div>
       <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-red-600">
-        <SlopeIcon difficulty="semi-difficult" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Semi-difficult</p>
+        <SlopeIcon difficulty="intermediate" />
+        <p className="text-xs sm:text-sm font-semibold ml-1">Intermediate</p>
       </div>
       <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-black">
         <SlopeIcon difficulty="difficult" />
