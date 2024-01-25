@@ -19,7 +19,7 @@ const SlopeLiftToggle = () => {
           className={`
             ${
               selectedList === "slopes" ? "bg-white" : "bg-gray-400"
-            } w-48 px-6 py-3 text-xl mr-4 border-none cursor-pointer`}
+            } w-48 px-6 py-3 text-xl mr-4 cursor-pointer border-solid border-b-2 border-gray-700`}
         >
             <p>
                 Slopes 
@@ -31,7 +31,7 @@ const SlopeLiftToggle = () => {
           className={`
             ${
               selectedList === "lifts" ? "bg-white" : "bg-gray-400"
-            } w-48 px-6 py-3 text-xl border-none cursor-pointer`}
+            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-gray-700`}
         >
             <p>
                 Lifts
