@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import fetchWeatherInfo from '../../services/weather/weatherService';
 import { TiWeatherSnow, TiWeatherCloudy, TiWeatherWindyCloudy } from "react-icons/ti";
-import { FaTemperatureLow } from "react-icons/fa";
+import { FaTemperatureEmpty } from 'react-icons/fa6';
 
 const WeatherComponent = () => {
     const [weatherInfo, setWeatherInfo] = useState<{
@@ -37,7 +37,7 @@ const WeatherComponent = () => {
             Current Weather
           </h2>
           <p className="text-gray-700 mb-2">
-            <FaTemperatureLow className="inline-block mr-2 text-black text-4xl" /> 
+            <FaTemperatureEmpty className="inline-block mr-2 text-black text-4xl" /> 
             Temperature: {weatherInfo.current.temperature2m} °C
           </p>
           <p className="text-gray-700 mb-2">
