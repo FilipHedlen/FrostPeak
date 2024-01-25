@@ -5,8 +5,8 @@ import WeatherComponent from '../Weather/WeatherComponent';
 
 const SkiSlopes = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center">
-      <div className="mb-5">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="mb-5 md:col-span-2">
         <WeatherComponent />
       </div>
       <div className="mb-5">
@@ -14,15 +14,15 @@ const SkiSlopes = () => {
           <img
             src="/ramund-slopes.jpg"
             alt="Ramundbergets ski slope map"
-            className="rounded-md w-[90%] sm:w-[50%] h-auto mx-auto"
+            className="rounded-md w-full h-auto mx-auto"
           />
         </Zoom>
       </div>
-      <div>
+      <div className="md:col-start-3">
         <SlopeDifficulty />
       </div>
     </div>
-  )
+  );
 };
 
-export default SkiSlopes
+export default SkiSlopes;

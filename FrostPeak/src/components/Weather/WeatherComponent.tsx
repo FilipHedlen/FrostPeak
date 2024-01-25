@@ -29,23 +29,23 @@ const WeatherComponent = () => {
   }, []);
 
   return (
-    <div className="bg-white shadow-lg w-52 mx-auto p-4 rounded-3xl font-nunito">
+    <div className="bg-white shadow-lg w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto p-6 rounded-md font-poppins">
       {weatherInfo && (
-        <div>
-          <h2 className="font-bold text-gray-800 mb-5">
-            <TiWeatherCloudy className="inline-block mr-2 text-blue-500" /> 
+        <div className="flex flex-col">
+          <h2 className="font-bold text-gray-800 mb-4 text-3xl">
+            <TiWeatherCloudy className="inline-block mr-2 text-black text-5xl" /> 
             Current Weather
           </h2>
           <p className="text-gray-700 mb-2">
-            <FaTemperatureLow className="inline-block mr-2 text-blue-500" /> 
+            <FaTemperatureLow className="inline-block mr-2 text-black text-4xl" /> 
             Temperature: {weatherInfo.current.temperature2m} °C
           </p>
           <p className="text-gray-700 mb-2">
-            <TiWeatherSnow className="inline-block mr-2 text-blue-500" /> 
+            <TiWeatherSnow className="inline-block mr-2 text-black text-4xl" /> 
             Snowfall: {weatherInfo.current.snowfall} mm
           </p>
           <p className="text-gray-700">
-            <TiWeatherWindyCloudy className="inline-block mr-2 text-blue-500" /> 
+            <TiWeatherWindyCloudy className="inline-block mr-2 text-black text-4xl" /> 
             Wind Speed: {weatherInfo.current.windSpeed10m} m/s
           </p>
         </div>
