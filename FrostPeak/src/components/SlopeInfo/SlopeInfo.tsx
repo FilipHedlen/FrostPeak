@@ -17,7 +17,7 @@ const SlopeInfo: React.FC<Slope> = ({ number, name, difficulty, length }) => {
         return <><FaDiamond className="text-black -mr-1.5" /><FaDiamond className="text-black" /></>;
       case 'difficult':
         return <FaDiamond className="text-black" />;
-      case 'moderately difficult':
+      case 'semi difficult':
         return <MdRectangle className="text-red-600" />;
       case 'easy':
         return <FaSquareFull className="text-blue-600" />;

@@ -16,7 +16,7 @@ const SlopeDifficulty = () => {
       </div>
       <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-red-600">
         <MdRectangle className="text-red-600 mr-1 sm:mr-2" />
-        <p className="text-xs sm:text-sm font-semibold">Moderately difficult</p>
+        <p className="text-xs sm:text-sm font-semibold">Semi-difficult</p>
       </div>
       <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-black">
         <FaDiamond className="text-black mr-1 sm:mr-2" />
