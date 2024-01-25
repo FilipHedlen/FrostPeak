@@ -2,6 +2,7 @@ import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import SlopeDifficulty from '../SlopeDifficulty/SlopeDifficulty';
 import WeatherComponent from '../Weather/WeatherComponent';
+import SlopeList from '../SlopeList/SlopeList';
 
 const SkiSlopes = () => {
   return (
@@ -9,7 +10,7 @@ const SkiSlopes = () => {
       <div className="mb-5 md:col-span-2">
         <WeatherComponent />
       </div>
-      <div className="mb-5">
+      <div className="mb-5 mr-5">
         <Zoom>
           <img
             src="/ramund-slopes.jpg"
@@ -20,6 +21,9 @@ const SkiSlopes = () => {
       </div>
       <div className="md:col-start-3">
         <SlopeDifficulty />
+      </div>
+      <div>
+        <SlopeList />
       </div>
     </div>
   );
