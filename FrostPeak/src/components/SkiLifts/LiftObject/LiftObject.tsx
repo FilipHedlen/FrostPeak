@@ -7,8 +7,8 @@ export interface Lift {
 
 const LiftObject: React.FC<Lift> = ({ number, name }) => {
     return (
-      <div className="bg-white shadow-lg p-4 mb-4 rounded-md font-poppins">
-        <h2 className="font-bold text-gray-800 text-xl mb-2">{number}. {name}</h2>
+      <div className="bg-white shadow-lg p-4 mb-1 ml-5 mr-5 rounded-md font-poppins flex flex-row justify-center">
+        <h2 className="font-bold text-gray-800 mb-2">{number}. {name}</h2>
       </div>
     );
 };
