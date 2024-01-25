@@ -1,7 +1,7 @@
 import SlopeObject from '../SlopeObject/SlopeObject';
 import slopeData from '../../../data/slopeData';
 
-const SlopesList = () => {
+const SlopeList = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-screen">
       <ul className="list-none p-0 m-0">
@@ -15,4 +15,4 @@ const SlopesList = () => {
   );
 };
 
-export default SlopesList;
+export default SlopeList;
