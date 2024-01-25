@@ -12,7 +12,7 @@ const slopeData: Slope[] = [
   { number: 9, name: "Stupet", difficulty: "Very difficult", length: "100 m" },
   { number: 10, name: "Osthangleden", difficulty: "Intermediate", length: "600 m" },
   { number: 11, name: "Helags", difficulty: "Intermediate", length: "1500 m" },
-  { number: 12, name: "Ekorrpasset/Ekorrparken", difficulty: "Easy", secondDifficulty: "Intermediate", length: "600 m" },
+  { number: 12, name: "Ekorrpasset/parken", difficulty: "Easy", secondDifficulty: "Intermediate", length: "600 m" },
   { number: 13, name: "Nordvästleden", difficulty: "Easy", length: "800 m" },
   { number: 14, name: "Solliftsleden", difficulty: "Easy", length: "700 m" },
   { number: 15, name: "Skaftet", difficulty: "Difficult", length: "600 m" },

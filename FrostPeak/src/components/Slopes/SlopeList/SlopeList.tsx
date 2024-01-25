@@ -3,7 +3,7 @@ import slopeData from '../../../data/slopeData';
 
 const SlopeList = () => {
   return (
-    <ul className="w-[50%]">
+    <ul>
       {slopeData.map((slope, index) => (
         <li key={index}>
           <SlopeObject {...slope} />

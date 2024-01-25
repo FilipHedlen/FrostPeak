@@ -3,7 +3,7 @@ import liftData from '../../../data/liftData';
 
 const LiftList = () => {
   return (
-    <ul className="w-[50%]">
+    <ul>
       {liftData.map((lift, index) => (
         <li key={index}>
           <LiftObject {...lift} />
