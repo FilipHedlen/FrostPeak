@@ -1,3 +1,4 @@
+import LiftList from "../../components/SkiLifts/LiftList/LiftList";
 import SkiSlopes from "../../components/Slopes/SkiSlopes/SkiSlopes"
 import SlopeDifficulty from "../../components/Slopes/SlopeDifficulty/SlopeDifficulty";
 import SlopeList from "../../components/Slopes/SlopeList/SlopeList";
@@ -11,6 +12,7 @@ const SlopePage = () => {
       <SlopeDifficulty />
       <SkiSlopes />
       <SlopeList />
+      <LiftList />
     </>
   )
 };
