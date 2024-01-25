@@ -14,7 +14,7 @@ const SlopeIcon: React.FC<SlopeIconProps> = ({ difficulty }) => {
     case 'difficult':
       return <FaDiamond className="text-black text-2xl" />;
     case 'intermediate':
-      return <MdRectangle className="text-red-600 text-2xl" />;
+      return <MdRectangle className="text-red-600 text-3xl" />;
     case 'easy':
       return <FaSquareFull className="text-blue-600 text-2xl" />;
     case 'very easy':

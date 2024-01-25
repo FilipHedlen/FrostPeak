@@ -17,7 +17,7 @@ const SlopeInfo: React.FC<Slope> = ({ number, name, difficulty, secondDifficulty
           <SlopeIcon difficulty={difficulty} />
           {secondDifficulty && ( // If a slope has more than one difficulty then this will render 
           <>
-            <SlopeIcon difficulty={secondDifficulty} />
+            <p className="ml-1">&</p> <SlopeIcon difficulty={secondDifficulty} />
           </>
         )}
         </div>
