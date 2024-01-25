@@ -12,25 +12,33 @@ const SlopeLiftToggle = () => {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => handleToggle("slopes")}
-        className={`
-          ${
-            selectedList === "slopes" ? "bg-white" : "bg-gray-400"
-          } px-4 py-2 text-lg mr-4 border-none cursor-pointer inline-block`}
-      >
-        Slopes <FaPersonSkiing className="ml-2" />
-      </button>
-      <button
-        onClick={() => handleToggle("lifts")}
-        className={`
-          ${
-            selectedList === "lifts" ? "bg-white" : "bg-gray-400"
-          } px-4 py-2 text-lg border-none cursor-pointer inline-block`}
-      >
-        Lifts <TbAerialLift className="ml-2" />
-      </button>
+    <div className="text-center">
+      <div className="flex justify-center">
+        <button
+          onClick={() => handleToggle("slopes")}
+          className={`
+            ${
+              selectedList === "slopes" ? "bg-white" : "bg-gray-400"
+            } w-48 px-6 py-3 text-xl mr-4 border-none cursor-pointer`}
+        >
+            <p>
+                Slopes 
+                <FaPersonSkiing className="inline-block mr-2 text-black text-2xl ml-2" />
+            </p>
+        </button>
+        <button
+          onClick={() => handleToggle("lifts")}
+          className={`
+            ${
+              selectedList === "lifts" ? "bg-white" : "bg-gray-400"
+            } w-48 px-6 py-3 text-xl border-none cursor-pointer`}
+        >
+            <p>
+                Lifts
+                <TbAerialLift className="inline-block mr-2 text-black text-2xl ml-2" />
+            </p>
+        </button>
+      </div>
       {selectedList === "slopes" ? <SlopeList /> : <LiftList />}
     </div>
   );
