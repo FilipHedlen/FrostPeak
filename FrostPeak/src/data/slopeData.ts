@@ -1,4 +1,4 @@
-import { Slope } from '../components/SlopeInfo/SlopeInfo';
+import { Slope } from '../components/SlopeObject/SlopeObject';
 
 const slopeData: Slope[] = [
   { number: 1, name: "Svarte Petter", difficulty: "Very difficult", length: "1100 m" },

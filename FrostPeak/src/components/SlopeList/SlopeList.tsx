@@ -1,4 +1,4 @@
-import SlopeInfo from '../SlopeInfo/SlopeInfo';
+import SlopeObject from '../SlopeObject/SlopeObject';
 import slopeData from '../../data/slopeData';
 
 const SlopesList = () => {
@@ -7,7 +7,7 @@ const SlopesList = () => {
       <ul className="list-none p-0 m-0">
         {slopeData.map((slope, index) => (
           <li key={index}>
-            <SlopeInfo {...slope} />
+            <SlopeObject {...slope} />
           </li>
         ))}
       </ul>

@@ -9,7 +9,7 @@ export interface Slope {
   length: string;
 }
 
-const SlopeInfo: React.FC<Slope> = ({ number, name, difficulty, secondDifficulty, length }) => {
+const SlopeObject: React.FC<Slope> = ({ number, name, difficulty, secondDifficulty, length }) => {
     return (
       <div className="bg-white shadow-lg p-4 mb-4 rounded-md font-poppins">
         <h2 className="font-bold text-gray-800 text-xl mb-2">{number}. {name}</h2>
@@ -26,4 +26,4 @@ const SlopeInfo: React.FC<Slope> = ({ number, name, difficulty, secondDifficulty
     );
   };
   
-  export default SlopeInfo;
+  export default SlopeObject;
