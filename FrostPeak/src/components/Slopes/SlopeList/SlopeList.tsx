@@ -1,5 +1,5 @@
 import SlopeObject from '../SlopeObject/SlopeObject';
-import slopeData from '../../data/slopeData';
+import slopeData from '../../../data/slopeData';
 
 const SlopesList = () => {
   return (

@@ -1,6 +1,6 @@
-import SkiSlopes from "../../components/SkiSlopes/SkiSlopes"
-import SlopeDifficulty from "../../components/SlopeDifficulty/SlopeDifficulty";
-import SlopeList from "../../components/SlopeList/SlopeList";
+import SkiSlopes from "../../components/Slopes/SkiSlopes/SkiSlopes"
+import SlopeDifficulty from "../../components/Slopes/SlopeDifficulty/SlopeDifficulty";
+import SlopeList from "../../components/Slopes/SlopeList/SlopeList";
 import WeatherComponent from "../../components/Weather/WeatherComponent";
 
 
