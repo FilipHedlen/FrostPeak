@@ -1,5 +1,5 @@
 import SlopeInfo from '../SlopeInfo/SlopeInfo';
-import slopesData from '../../data/slopesData';
+import slopesData from '../../data/slopeData';
 
 const SlopesList = () => {
   return (

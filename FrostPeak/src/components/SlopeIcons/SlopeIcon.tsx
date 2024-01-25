@@ -10,15 +10,15 @@ interface SlopeIconProps {
 const SlopeIcon: React.FC<SlopeIconProps> = ({ difficulty }) => {
   switch (difficulty.toLowerCase()) {
     case 'very difficult':
-      return <><FaDiamond className="text-black -mr-0.5" /><FaDiamond className="text-black" /></>;
+      return <><FaDiamond className="text-black -mr-0.5 text-2xl" /><FaDiamond className="text-black text-2xl" /></>;
     case 'difficult':
-      return <FaDiamond className="text-black" />;
+      return <FaDiamond className="text-black text-2xl" />;
     case 'intermediate':
-      return <MdRectangle className="text-red-600" />;
+      return <MdRectangle className="text-red-600 text-2xl" />;
     case 'easy':
-      return <FaSquareFull className="text-blue-600" />;
+      return <FaSquareFull className="text-blue-600 text-2xl" />;
     case 'very easy':
-      return <FaCircle className="text-green-600" />;
+      return <FaCircle className="text-green-600 text-2xl" />;
     default:
       return null;
   }
