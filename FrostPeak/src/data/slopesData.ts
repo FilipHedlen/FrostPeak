@@ -9,6 +9,10 @@ const slopesData: Slope[] = [
   { number: 6, name: "Prima", difficulty: "Difficult", length: "1000 m" },
   { number: 7, name: "Sörsvängen", difficulty: "Difficult", length: "300 m" },
   { number: 8, name: "Lillåssvängen", difficulty: "Intermediate", length: "150 m" },
+  { number: 9, name: "Stupet", difficulty: "Very difficult", length: "100 m" },
+  { number: 10, name: "Osthangleden", difficulty: "Intermediate", length: "600 m" },
+  { number: 11, name: "Helags", difficulty: "Intermediate", length: "1500 m" },
+  { number: 12, name: "Ekorrpasset/Ekorrparken", difficulty: "Easy", secondDifficulty: "Intermediate", length: "600 m" },
 ];
 
 export default slopesData;
