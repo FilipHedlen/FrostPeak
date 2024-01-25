@@ -1,7 +1,7 @@
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
-const SkiSlopes = () => {
+const SlopeMap = () => {
   return (
       <div className="mb-5 mr-5">
         <Zoom>
@@ -15,4 +15,4 @@ const SkiSlopes = () => {
   );
 };
 
-export default SkiSlopes;
+export default SlopeMap;

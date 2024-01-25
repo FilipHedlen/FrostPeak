@@ -1,7 +1,7 @@
 import SlopeLiftToggle from "../../components/SlopeLiftToggle/SlopeLiftToggle";
-import SkiSlopes from "../../components/Slopes/SkiSlopes/SkiSlopes"
 import SlopeDifficulty from "../../components/Slopes/SlopeDifficulty/SlopeDifficulty";
 import WeatherComponent from "../../components/Weather/WeatherComponent";
+import SlopeMap from "../../components/Slopes/SlopeMap/SlopeMap";
 
 
 const SlopePage = () => {
@@ -9,7 +9,7 @@ const SlopePage = () => {
     <>
       <WeatherComponent />
       <SlopeDifficulty />
-      <SkiSlopes />
+      <SlopeMap />
       <SlopeLiftToggle />
     </>
   )
