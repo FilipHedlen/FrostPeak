@@ -23,7 +23,9 @@ export default {
             lightgrey: "#6b7280",
         },
         transitionDuration: {
-            '1500': '1500ms',
+            "1500": "1500ms",
+            "2000": "2000ms",
+            "2500": "2500ms",
           }
     },
   },

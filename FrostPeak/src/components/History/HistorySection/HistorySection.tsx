@@ -12,7 +12,7 @@ const HistorySection = () => {
   return (
     <div className="container mx-auto p-8">
       <section
-        className={`bg-white shadow-lg p-6 mb-8 transition-all duration-1500 ease-in-out transform rounded-md ${
+        className={`bg-white shadow-lg p-6 mb-8 transition-all duration-2000 ease-in-out transform rounded-md ${
             isAnimated ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
         }`}
       >
