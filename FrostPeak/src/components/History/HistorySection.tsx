@@ -10,13 +10,13 @@ const HistorySection = () => {
   return (
     <div className="container mx-auto p-8">
       <section
-        className={`bg-white shadow-lg p-6 mb-8 transition-all duration-1500 ease-in-out transform ${
+        className={`bg-white shadow-lg p-6 mb-8 transition-all duration-1500 ease-in-out transform rounded-md ${
             isAnimated ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
         }`}
       >
         <article>
           <h2 className="text-2xl font-playfair font-semibold mb-4 text-black">Ramundbergets history</h2>
-          <p className="text-gray font-nunito">
+          <p className="text-grey font-poppins">
             The history of Ramundberget traces back to 1934, 
             when skiing students stayed in the tourist association's cottage Girtibauna, 
             6 kilometers northwest of Ramundberget.
@@ -30,7 +30,7 @@ const HistorySection = () => {
             Despite the lack of beds, Agaton negotiated for ten beds on credit from his brother-in-law in Funäsdalen,
             and the commercial activity in Ramundberget started. 
           </p>
-          <p className="text-gray">
+          <p className="text-grey">
 
           </p>
           <div className="text-lightgrey font-nunito text-sm mt-4">

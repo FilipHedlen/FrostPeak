@@ -21,7 +21,10 @@ export default {
             blue: "#1565C0",
             grey: "#1F2937",
             lightgrey: "#6b7280",
-        }
+        },
+        transitionDuration: {
+            '1500': '1500ms',
+          }
     },
   },
   plugins: [],
