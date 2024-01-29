@@ -1,9 +1,18 @@
-import React from 'react'
+import SlopeLiftToggle from "../../components/SlopeLiftToggle/SlopeLiftToggle";
+import SlopeDifficulty from "../../components/Slopes/SlopeDifficulty/SlopeDifficulty";
+import WeatherComponent from "../../components/Weather/WeatherComponent";
+import SlopeMap from "../../components/Slopes/SlopeMap/SlopeMap";
 
-export const SlopePage = () => {
+
+const SlopePage = () => {
   return (
-    <div>SlopePage</div>
+    <>
+      <WeatherComponent />
+      <SlopeDifficulty />
+      <SlopeMap />
+      <SlopeLiftToggle />
+    </>
   )
-}
+};
 
 export default SlopePage
