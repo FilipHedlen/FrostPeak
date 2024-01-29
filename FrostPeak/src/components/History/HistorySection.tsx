@@ -33,10 +33,10 @@ const HistorySection = () => {
             and the commercial activity in Ramundberget started. 
           </p>
           <p className="text-grey font-poppins leading-relaxed pt-6">
-            Ramundberget in Härjedalen is owned by the Flacké family since 1993, 
+            Ramundberget is owned by the Flacké family since 1993, 
             with Philip Flacké as chairman of the board.
             The resort marked its 75th anniversary in 2011, which makes for its 88th in 2024.
-            Noting achievements include 5000 employees taht have passed through the resort,
+            Noting achievements include 5000 employees that have passed through the resort,
             55 million skier descents, 
             and snow preparations covering areas equivalent to 374,000 football fields since 1936.
             The resort's history includes milestones such as the introduction of the telephone in 1937, 
