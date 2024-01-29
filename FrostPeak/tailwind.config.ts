@@ -15,6 +15,13 @@ export default {
             nunito: ['Nunito', 'sans-serif'],
             poppins: ['Poppins', 'sans-serif'],
         },
+        colors: {
+            white: "#f5f5f5",
+            black: "#111111",
+            blue: "#1565C0",
+            grey: "#1F2937",
+            lightgrey: "#6b7280",
+        }
     },
   },
   plugins: [],
