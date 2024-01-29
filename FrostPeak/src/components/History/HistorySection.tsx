@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const HistorySection = () => {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -15,12 +17,12 @@ const HistorySection = () => {
         }`}
       >
         <article>
-          <h2 className="text-2xl font-playfair font-semibold mb-4 text-black">Ramundbergets history</h2>
+          <h2 className="text-2xl font-playfair font-semibold mb-4 text-black">A brief history of Ramundberget</h2>
           <p className="text-grey font-poppins leading-relaxed pt-6">
             The history of Ramundberget traces back to 1934, 
             when skiing students stayed in the tourist association's cottage Girtibauna, 
             6 kilometers northwest of Ramundberget.
-            The year after, 1935, Brita and Agaton accommodated the same students
+            The year after, 1935, Brita and Agaton Norberg accommodated the same students
             with belonging girlfriends, at their own farm.
             The students, belonging to "The academic mountain club", 
             enjoyed their stay with their girlfriends, 
@@ -40,6 +42,13 @@ const HistorySection = () => {
             The resort's history includes milestones such as the introduction of the telephone in 1937, 
             the completion of the road from Bruksvallarna in 1949, and the construction of the first lift in 1958.
           </p>
+          <Zoom>
+            <img
+              src="/ramund-family.jpeg"
+              alt="Ramundbergets founders family picture"
+              className="rounded-md w-30 md:w-80 h-auto mx-auto m-6"
+            />
+          </Zoom>
           <div className="text-lightgrey font-nunito text-sm mt-4">
             <p>Cited by Håkan Persson</p>
             <p>Published on April 5, 2011</p>
