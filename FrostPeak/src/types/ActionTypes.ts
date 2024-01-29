@@ -1,0 +1,6 @@
+export enum ActionType {
+    SET_PLACES,
+    SET_SELECTED_PLACE,
+    SET_FILTER,
+    SET_DISPLAYED_LOCATIONS,
+}

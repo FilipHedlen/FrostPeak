@@ -1,6 +1,6 @@
 import useGoogleAPIsHook from "../../hooks/googleAPI/googleAPI";
 
-const useGoogleMaps = () => {
+const useGooglePlaces = () => {
   const { isLoaded, loadError } = useGoogleAPIsHook();
 
   if (loadError) {
@@ -10,4 +10,4 @@ const useGoogleMaps = () => {
   return { isLoaded };
 };
 
-export default useGoogleMaps;
+export default useGooglePlaces;
