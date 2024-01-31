@@ -15,8 +15,8 @@ const ContactFAQ: React.FC = () => {
 
 
   return (
-    <div>
-      <h3 className="text-2xl font-bold mb-2 font-playfair">FAQ</h3>
+    <div className="w-full max-w-lg ml-auto my-8">
+      <h3 className="text-2xl text-white font-bold mb-2 font-playfair">FAQ</h3>
       {faqData.map((faq, index) => (
         <div key={index} className="mb-3">
         <div
