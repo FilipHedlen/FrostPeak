@@ -2,17 +2,25 @@ import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const handleSubmit = async (e) => {
-      e.preventDefault();
+    e.preventDefault();
+
+    const serviceId = process.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = process.env.VITE_EMAILJS_TEMPLATE_ID;
     
-      try {
-        await emailjs.sendForm("service_gghqdxm", "template_zsmoiwg", e.target);
-        console.log('Email sent successfully!');
-      } catch (error) {
-        console.error('Error sending email:', error);
-      }
+    if (!serviceId || !templateId) {
+        console.error("Service ID or Template ID is not defined.");
+        return;
+    }
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, e.target);
+      console.log("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email", error);
+    }
       
-      e.target.reset();
-    };
+    e.target.reset();
+  };
 
     return (
       <form className="w-full max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
