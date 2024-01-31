@@ -1,5 +1,3 @@
-import ContactFAQ from "../ContactFAQ/ContactFAQ";
-
 const ContactSection = () => {
   return (
     <div className="flex flex-col items-start mt-8 ml-5 text-white">
@@ -9,7 +7,6 @@ const ContactSection = () => {
         <p>Phone: +123 123 123</p>
         <p>Address: Bergarvägen 31, 846 97 Bruksvallarna</p>
       </div>
-      <ContactFAQ />
     </div>
   );
 };
