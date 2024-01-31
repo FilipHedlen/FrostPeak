@@ -26,7 +26,8 @@ const ContactForm = () => {
             id="message"
             rows={4}
             placeholder="Your Message"
-          ></textarea>
+          >
+          </textarea>
         </div>
   
         <div className="flex items-center justify-end">
@@ -41,4 +42,4 @@ const ContactForm = () => {
     );
 };
   
-  export default ContactForm;
+export default ContactForm;
