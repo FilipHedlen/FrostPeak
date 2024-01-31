@@ -1,6 +1,21 @@
+import emailjs from '@emailjs/browser';
+
 const ContactForm = () => {
+  const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      try {
+        await emailjs.sendForm("service_gghqdxm", "template_zsmoiwg", e.target);
+        console.log('Email sent successfully!');
+      } catch (error) {
+        console.error('Error sending email:', error);
+      }
+      
+      e.target.reset();
+    };
+
     return (
-      <form className="w-full max-w-lg mx-auto my-8">
+      <form className="w-full max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold mb-4 font-playfair text-white">Contact form</h2>
         <div className="mb-4">
           <input
@@ -33,7 +48,7 @@ const ContactForm = () => {
         <div className="flex items-center justify-end">
           <button
             className="bg-white hover:bg-lightgrey text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-nunito"
-            type="button"
+            type="submit"
           >
             Send Message
           </button>

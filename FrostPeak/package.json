@@ -17,7 +17,7 @@
     "@react-google-maps/api": "^2.19.2",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/react": "^3.0.0",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.1",
     "jest-axe": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,6 +27,7 @@
     "react-medium-image-zoom": "^5.1.10",
     "react-router-dom": "^6.21.1",
     "react-tsparticles": "^2.12.2",
+    "ts-node": "^10.9.2",
     "tsparticles": "^3.0.3"
   },
   "devDependencies": {
