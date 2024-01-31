@@ -4,11 +4,13 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID; // Env variables for EmailJS
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    if (e.currentTarget) {
+    const form = e.currentTarget;
+
+    if (form) {
         try {
           await emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey);
           console.log("Email sent successfully!");
@@ -16,7 +18,7 @@ const ContactForm = () => {
           console.error("Error sending email", error);
         }
     
-        e.currentTarget.reset();
+        form.reset();
       }
     };
 
