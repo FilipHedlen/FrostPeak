@@ -6,14 +6,10 @@ const ContactForm = () => {
 
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    
-    if (!serviceId || !templateId) {
-        console.error("Service ID or Template ID is not defined.");
-        return;
-    }
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     try {
-      await emailjs.sendForm(serviceId, templateId, e.currentTarget);
+      await emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey);
       console.log("Email sent successfully!");
     } catch (error) {
       console.error("Error sending email", error);
