@@ -8,15 +8,17 @@ const ContactForm = () => {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    try {
-      await emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey);
-      console.log("Email sent successfully!");
-    } catch (error) {
-      console.error("Error sending email", error);
-    }
-      
-    e.currentTarget.reset();
-  };
+    if (e.currentTarget) {
+        try {
+          await emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey);
+          console.log("Email sent successfully!");
+        } catch (error) {
+          console.error("Error sending email", error);
+        }
+    
+        e.currentTarget.reset();
+      }
+    };
 
     return (
       <form className="w-full max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
@@ -26,6 +28,7 @@ const ContactForm = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
+            name="name"
             placeholder="Your Name"
           />
         </div>
@@ -35,6 +38,7 @@ const ContactForm = () => {
             className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
+            name="email"
             placeholder="Email"
           />
         </div>
@@ -43,6 +47,7 @@ const ContactForm = () => {
           <textarea
             className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
             id="message"
+            name="message"
             rows={4}
             placeholder="Your Message"
           >
