@@ -14,7 +14,7 @@ const faqData: FAQItem[] = [
         answer: "A: Yes, the parent pass is available if two parents want to split the time between children"
     },
     {
-        question: "Q: Do you have a list of possible hotels or Airbnb's?",
+        question: "Q: Do you have a list of possible hotels or Airbnb's in the vicinity?",
         answer: "A: Yes, head over to our Locations page, there you can find affordable room and board for your entire stay"
     },
     {
