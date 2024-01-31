@@ -13,4 +13,4 @@ const LiftObject: React.FC<Lift> = ({ number, name }) => {
     );
 };
   
-  export default LiftObject;
+export default LiftObject;
