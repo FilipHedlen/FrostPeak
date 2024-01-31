@@ -16,17 +16,17 @@ const ContactFAQ: React.FC = () => {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold mb-2">FAQ</h3>
+      <h3 className="text-2xl font-bold mb-2 font-playfair">FAQ</h3>
       {faqData.map((faq, index) => (
         <div key={index} className="mb-3">
         <div
-          className="cursor-pointer text-blue-500"
+          className="cursor-pointer text-white hover:text-black font-poppins"
           onClick={() => handleOpenAnswer(index)}
         >
           {faq.question}
         </div>
         {openAnswer === index && (
-            <p className="ml-4">{faq.answer}</p>
+            <p className="ml-4 text-white font-poppins">{faq.answer}</p>
           )}
         </div>
       ))}
