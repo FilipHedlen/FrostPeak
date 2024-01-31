@@ -1,11 +1,11 @@
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceId = process.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = process.env.VITE_EMAILJS_TEMPLATE_ID;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     
     if (!serviceId || !templateId) {
         console.error("Service ID or Template ID is not defined.");
@@ -13,13 +13,13 @@ const ContactForm = () => {
     }
 
     try {
-      await emailjs.sendForm(serviceId, templateId, e.target);
+      await emailjs.sendForm(serviceId, templateId, e.currentTarget);
       console.log("Email sent successfully!");
     } catch (error) {
       console.error("Error sending email", error);
     }
       
-    e.target.reset();
+    e.currentTarget.reset();
   };
 
     return (
