@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import WeatherComponent from "../Weather/WeatherComponent";
-import "../../input.css";
 
 const HeroSection = () => {
     return (
-        <section className="hero relative bg-hero bg-cover h-[60vh]">
+        <section className="hero relative bg-hero bg-cover h-[50%]">
             <div className="hero-content text-center text-white flex flex-row flex-wrap justify-around">
                 <div className="mt-10 mb-32">
                     <h1 className="text-4xl font-bold mb-4 font-playfair text-stroke">Welcome to Ramundberget!</h1>
