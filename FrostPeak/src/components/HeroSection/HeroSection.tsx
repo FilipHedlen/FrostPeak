@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import WeatherComponent from "../Weather/WeatherComponent";
 
 const HeroSection = () => {
     return (
-        <section className="hero relative bg-hero bg-cover h-[50%]">
+        <section className="hero relative bg-hero bg-cover min-h-[55vh] -mt-2">
             <div className="hero-content text-center text-white flex flex-row flex-wrap justify-around">
                 <div className="mt-10 mb-32">
                     <h1 className="text-4xl font-bold mb-4 font-playfair text-stroke">Welcome to Ramundberget!</h1>
@@ -14,9 +13,6 @@ const HeroSection = () => {
                         <span className="relative w-full text-left text-black transition-colors duration-200 ease-in-out group-hover:text-gray-900">Explore</span>
                         <span className="absolute inset-0 border-2 border-black rounded-full"></span>
                     </Link>
-                </div>
-                <div className="mt-10">
-                    <WeatherComponent />
                 </div>
             </div>
         </section>
