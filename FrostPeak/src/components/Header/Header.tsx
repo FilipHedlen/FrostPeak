@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import NavMenu from '../NavMenu/NavMenu';
+import MobileNavMenu from '../Menu/Mobile/MobileNavMenu';
+import DesktopNavMenu from '../Menu/Desktop/DesktopNavMenu';
 
 const Header = () => {
   return (
@@ -8,7 +9,8 @@ const Header = () => {
         <Link to="/">
             <img src="/logo.png" alt="Logo" className="" />
         </Link>
-        <NavMenu />
+        <MobileNavMenu />
+        <DesktopNavMenu />
       </div>
     </header>
   );
