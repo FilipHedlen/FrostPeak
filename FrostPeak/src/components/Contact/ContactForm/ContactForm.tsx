@@ -35,7 +35,7 @@ const ContactForm = () => {
               </h3>
             </div>
            : (
-            <form className="w-full max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
+            <form className="w-[90%] max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
               <h2 className="text-2xl font-bold mb-4 font-playfair text-white">Contact form</h2>
               <div className="mb-4">
                 <input
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 />
               </div>
       
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-start">
                 <button
                   className="bg-white hover:bg-lightgrey text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-nunito"
                   type="submit"
