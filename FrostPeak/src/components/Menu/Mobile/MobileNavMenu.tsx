@@ -17,7 +17,7 @@ const NavMenu = () => {
       <div className="flex items-center justify-between">
         <button
           onClick={toggleMenu}
-          className="text-white cursor-pointer focus:outline-none lg:hidden"
+          className="text-white cursor-pointer focus:outline-none lg:hidden z-50"
         >
           {isOpen ? (
             <svg
@@ -43,70 +43,55 @@ const NavMenu = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
-          <div className="bg-white p-24 rounded-lg shadow-md transition-all duration-2500 ease-in-out transform scale-100 opacity-100 z-50">
-            <ul className="flex flex-col space-y-4 font-poppins text-2xl text-black">
+        <div className="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-white w-[80%] max-w-md rounded-lg shadow-md opacity-100 animate-fade-in-left p-8">
+            <ul className="flex flex-col justify-between space-y-6 font-poppins text-2xl text-black">
               <li>
                 <Link 
-                to="/" 
-                onClick={() => {
-                    closeMenu();
-                }}
-                className="hover:border-b-2 border-black transition duration-100"
+                  to="/" 
+                  onClick={() => closeMenu()}
+                  className="hover:text-blue transition duration-100"
                 >
                   Home
                 </Link>
               </li>
               <li>
                 <Link 
-                to="/locations" 
-                onClick={() => {
-                    closeMenu();
-                }}
-                className="hover:border-b-2 border-black transition duration-100"
+                  to="/locations" 
+                  onClick={() => closeMenu()}
+                  className="hover:text-blue transition duration-100"
                 >
                   Locations
                 </Link>
               </li>
               <li>
                 <Link
-                to="/slopes" 
-                onClick={() => {
-                    closeMenu();
-                }}
-                className="hover:border-b-2 border-black transition duration-100"
+                  to="/slopes" 
+                  onClick={() => closeMenu()}
+                  className="hover:text-blue transition duration-100"
                 >
                   Slopes
                 </Link>
               </li>
               <li>
                 <Link 
-                to="/info" 
-                onClick={() => {
-                    closeMenu();
-                }}
-                className="hover:border-b-2 border-black transition duration-100"
+                  to="/info" 
+                  onClick={() => closeMenu()}
+                  className="hover:text-blue transition duration-100"
                 >
                   Information
                 </Link>
               </li>
               <li>
                 <Link 
-                to="/contact" 
-                onClick={() => {
-                    closeMenu();
-                }}
-                className="hover:border-b-2 border-black transition duration-100"
+                  to="/contact" 
+                  onClick={() => closeMenu()}
+                  className="hover:text-blue transition duration-100"
                 >
                   Contact
                 </Link>
               </li>
             </ul>
-          </div>
-          <div
-            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"
-            onClick={closeMenu}
-          >
           </div>
         </div>
       )}
