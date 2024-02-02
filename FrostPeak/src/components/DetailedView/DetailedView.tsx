@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import MapContainer from "../Map/MapComponent";
 import { IoCloseSharp } from "react-icons/io5";
 import StarRating from "../StarRating/StarRating";
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 interface DetailedViewProps {
   place: google.maps.places.PlaceResult;
@@ -23,7 +25,8 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
   }, [place]);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center overflow-auto items-center bg-black bg-opacity-80 z-50"
+    <div 
+        className="fixed top-0 left-0 w-full h-full flex justify-center overflow-auto items-center bg-black bg-opacity-80 z-50"
         onClick={(e) => {
             if (e.target === e.currentTarget) {
               onClose();
@@ -38,16 +41,18 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
         </button>
         <h3 className="text-2xl font-bold mb-2">{place.name}</h3>
         <p className="mb-2">{place.vicinity}</p>
-        <p className="mb-4 ">
+        <div className="mb-4 mx-auto text-center">
           <StarRating rating={place.rating || 0} />
-        </p>
+        </div>
         {place.photos && place.photos.length > 0 && (
           <div className="hidden sm:block">
-            <img
-              src={place.photos[0].getUrl({ maxWidth: 400, maxHeight: 400 })}
-              alt={place.name}
-              className="mb-4 rounded"
-            />
+            <Zoom>
+              <img
+                src={place.photos[0].getUrl({ maxWidth: 400, maxHeight: 400 })}
+                alt={place.name}
+                className="mb-4 rounded"
+              />
+            </Zoom>
           </div>
         )}
         <div className="sm:mt-4">

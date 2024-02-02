@@ -46,10 +46,9 @@ const PlacesComponent = () => {
   }, [isLoaded, state.filter]);
 
   return (
-    <div className="text-center mt-5">
+    <div className="text-center mt-5 mr-7 ml-7">
       <div className="flex justify-center items-center mb-4">
         <h2 className="text-white font-bold text-xl mr-2">Nearby Locations</h2>
-        <span className="text-white font-bold">|</span>
         <label className="ml-2 mr-2 text-white font-bold">Filter by:</label>
         <select
         onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}

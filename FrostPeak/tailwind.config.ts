@@ -16,11 +16,13 @@ export default {
             poppins: ['Poppins', 'sans-serif'],
         },
         colors: {
-            white: "#f5f5f5",
+            white: "#F5F5F5",
             black: "#111111",
             blue: "#1565C0",
             grey: "#1F2937",
-            lightgrey: "#6b7280",
+            lightgrey: "#6B7280",
+            yellow: "#FFEB3B",
+            gold: "#FFD700",
         },
         transitionDuration: {
             "1500": "1500ms",
