@@ -23,6 +23,8 @@ export default {
             lightgrey: "#6B7280",
             yellow: "#FFEB3B",
             gold: "#FFD700",
+            red: "#E53935",
+            green: "#43A047",
         },
         transitionDuration: {
             "1500": "1500ms",
