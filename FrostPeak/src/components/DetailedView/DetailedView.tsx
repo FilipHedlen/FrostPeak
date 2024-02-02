@@ -32,7 +32,7 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
               onClose();
             }
         }}>
-      <div className="bg-white p-6 rounded-lg relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
+      <div className="bg-white p-6 rounded-lg relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl mr-5 ml-5">
         <button
           className="absolute top-2 right-2 text-black text-3xl cursor-pointer"
           onClick={onClose}
