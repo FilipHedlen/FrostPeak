@@ -12,14 +12,14 @@ const SlopeLiftToggle = () => {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center mr-5 ml-5">
       <div className="flex justify-center">
         <button
           onClick={() => handleToggle("slopes")}
           className={`
             ${
               selectedList === "slopes" ? "bg-white" : "bg-gray-400"
-            } w-48 px-6 py-3 text-xl mr-4 cursor-pointer border-solid border-b-2 border-gray-700`}
+            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-gray-700`}
         >
             <p>
                 Slopes 
