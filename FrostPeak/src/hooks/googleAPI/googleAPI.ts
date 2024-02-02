@@ -7,6 +7,7 @@ const useGoogleAPIsHook = (options: any) => {
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-script',
     googleMapsApiKey,
+    libraries: ['maps', 'places'], 
     ...options,
   });
 
