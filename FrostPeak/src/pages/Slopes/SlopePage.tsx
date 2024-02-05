@@ -6,12 +6,12 @@ import SlopeMap from "../../components/Slopes/SlopeMap/SlopeMap";
 
 const SlopePage = () => {
   return (
-    <>
+    <div className="">
       <WeatherComponent />
       <SlopeDifficulty />
       <SlopeMap />
       <SlopeLiftToggle />
-    </>
+    </div>
   )
 };
 

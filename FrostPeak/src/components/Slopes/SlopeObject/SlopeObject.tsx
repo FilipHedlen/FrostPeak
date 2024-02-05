@@ -11,7 +11,7 @@ export interface Slope {
 
 const SlopeObject: React.FC<Slope> = ({ number, name, difficulty, secondDifficulty, length }) => {
     return (
-      <div className="bg-white shadow-lg p-4 mb-1 ml-5 mr-5 rounded-md font-poppins flex flex-row justify-center">
+      <div className="bg-white w-[50%] shadow-lg p-4 mb-1 mx-auto rounded-md font-poppins flex flex-row justify-center">
         <p className="font-bold text-gray-800 mr-5">{number}. {name}</p>
         <div className="flex items-center mr-5">
           <SlopeIcon difficulty={difficulty} />
