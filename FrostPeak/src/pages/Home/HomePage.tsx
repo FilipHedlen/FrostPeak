@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col">
       <HeroSection />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center animate-slide-in-top">
         <WeatherComponent />
       </div>
     </div>
