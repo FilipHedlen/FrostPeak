@@ -20,11 +20,13 @@ export default {
             black: "#111111",
             blue: "#1565C0",
             darkblue: "#00008B",
+            purple: "#0c008b",
             grey: "#1F2937",
             lightgrey: "#6B7280",
             yellow: "#FFEB3B",
             gold: "#FFD700",
             red: "#E53935",
+            cherryred: "#D2042D",
             green: "#43A047",
         },
         transitionDuration: {
