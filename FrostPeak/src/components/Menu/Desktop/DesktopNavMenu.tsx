@@ -20,8 +20,8 @@ const DesktopNavMenu = () => {
           </Link>
         </li>
         <li className="mr-5">
-          <Link to="/info" >
-            Information
+          <Link to="/about" >
+            About us
           </Link>
         </li>
         <li className="mr-5">

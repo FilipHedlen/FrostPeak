@@ -59,11 +59,11 @@ const MobileNavMenu = () => {
               </li>
               <li>
                 <Link 
-                  to="/info" 
+                  to="/about" 
                   onClick={() => closeMenu()}
                   className="hover:text-blue transition duration-100"
                 >
-                  Information
+                  About us
                 </Link>
               </li>
               <li>
