@@ -15,7 +15,7 @@ const ContactFAQ: React.FC = () => {
 
 
   return (
-    <div className="w-[90%] max-w-lg ml-auto mt-16 mb-40 animate-slide-in-right">
+    <div className="w-[90%] max-w-lg ml-auto mt-16 mb-24 animate-slide-in-right">
       <h3 className="text-2xl text-white font-bold mb-4 font-playfair underline">FAQ</h3>
       {faqData.map((faq, index) => (
         <div key={index} className="mb-3">
