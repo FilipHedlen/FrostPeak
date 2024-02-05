@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const NavMenu = () => {
+const MobileNavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,27 +19,11 @@ const NavMenu = () => {
           onClick={toggleMenu}
           className="text-white cursor-pointer focus:outline-none lg:hidden z-50"
         >
-          {isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-8 w-8"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-8 w-8"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
+          <div className="w-6 h-6">
+            <span className={`block bg-white h-1 w-full mb-1 transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block bg-white h-1 w-full mb-1 transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block bg-white h-1 w-full transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </div>
         </button>
       </div>
       {isOpen && (
@@ -99,4 +83,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default MobileNavMenu;
