@@ -1,31 +1,23 @@
 import { useEffect, useState } from 'react';
-import fetchWeatherInfo from '../../services/weather/weatherService';
+import fetchWeatherInfo, { WeatherData } from '../../services/weather/weatherService';
 import { TiWeatherSnow, TiWeatherCloudy, TiWeatherWindyCloudy } from "react-icons/ti";
 import { FaTemperatureEmpty } from 'react-icons/fa6';
 
 const WeatherComponent = () => {
-    const [weatherInfo, setWeatherInfo] = useState<{
-        current: {
-          time: Date;
-          temperature2m: number;
-          snowfall: number;
-          windSpeed10m: number;
-          windDirection10m: number;
-        };
-      } | null>(null);
+    const [weatherInfo, setWeatherInfo] = useState<WeatherData | null>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await fetchWeatherInfo();
-        setWeatherInfo(data);
-      } catch (error) {
-        console.log("Error with weather fetching");
-      }
-    };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const data = await fetchWeatherInfo();
+          setWeatherInfo(data);
+        } catch (error) {
+          console.log("Error with weather fetching");
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }, []);
 
   return (
     <div className="bg-white shadow-lg sm:w-[70%] md:w-[50%] lg:w-[20%] p-2 rounded-md font-poppins m-5">

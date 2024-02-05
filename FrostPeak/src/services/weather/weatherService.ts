@@ -1,6 +1,16 @@
 import { fetchWeatherApi } from 'openmeteo';
 
-const fetchWeatherInfo = async () => {
+export interface WeatherData {
+    current: {
+      time: Date;
+      temperature2m: number;
+      snowfall: number;
+      windSpeed10m: number;
+      windDirection10m: number;
+    };
+}
+
+const fetchWeatherInfo = async (): Promise<WeatherData | null> => {
   try {
     const params = {
       "latitude": 62.6667,
@@ -13,14 +23,14 @@ const fetchWeatherInfo = async () => {
       "forecast_days": 16
     };
 
-    const url = "https://api.open-meteo.com/v1/forecast";
+    const url = import.meta.env.VITE_WEATHER_API_URL;
     const responses = await fetchWeatherApi(url, params);
     const response = responses[0];
 
     const utcOffsetSeconds = response.utcOffsetSeconds();
     const current = response.current()!;
 
-    const weatherData = {
+    const weatherData: WeatherData = {
         current: {
           time: new Date((Number(current.time()) + utcOffsetSeconds) * 1000),
           temperature2m: Math.round(current.variables(0)!.value()),
