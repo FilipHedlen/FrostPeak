@@ -36,6 +36,7 @@ export default {
         },
         animation: {
             "slide-in-top": "slide-in-top 0.8s ease-out",
+            "slide-in-right": "slide-in-right 1s ease-out",
             "fade-in-left": "fade-in-left 0.6s ease-in-out",
         },
         keyframes: {
@@ -47,6 +48,14 @@ export default {
                 transform: "translateY(0)",
               },
             },
+            "slide-in-right": {
+                "0%": {
+                  transform: "translateX(-100px)",
+                },
+                "100%": {
+                  transform: "translateX(0)",
+                },
+              },
             "fade-in-left": {
                 "0%": {
                     opacity: "0",

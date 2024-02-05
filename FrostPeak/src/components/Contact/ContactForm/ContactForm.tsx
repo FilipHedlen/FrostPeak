@@ -35,8 +35,8 @@ const ContactForm = () => {
               </h3>
             </div>
            : (
-            <form className="w-[90%] max-w-lg mx-auto my-8" onSubmit={handleSubmit}>
-              <h2 className="text-2xl font-bold mb-4 font-playfair text-white">Contact form</h2>
+            <form className="w-[90%] max-w-lg mx-auto my-8 animate-slide-in-top" onSubmit={handleSubmit}>
+              <h3 className="text-2xl font-bold mb-4 font-playfair text-white underline">Contact form</h3>
               <div className="mb-4">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
@@ -64,9 +64,9 @@ const ContactForm = () => {
                   placeholder="Your Message"
                 />
               </div>
-              <div className="flex items-center justify-start">
+              <div className="flex justify-start">
                 <button
-                  className="flex max-w-sm sm:max-w-full bg-darkblue hover:bg-cherryred focus:outline-none text-white text-lg sm:text-xl font-bold shadow-md rounded-full mx-auto p-3 sm:p-3"
+                  className="bg-darkblue hover:bg-cherryred focus:outline-none text-white text-lg sm:text-xl font-bold shadow-md rounded-full p-3"
                   type="submit"
                 >
                   Send Message
