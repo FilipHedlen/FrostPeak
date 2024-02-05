@@ -9,7 +9,7 @@ const LiftList = () => {
           <LiftObject {...lift} />
         </li>
       ))}
-      </ul>
+    </ul>
   );
 };
 
