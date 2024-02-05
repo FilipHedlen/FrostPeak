@@ -45,7 +45,7 @@ const DetailedViewComponent: React.FC<DetailedViewProps> = ({ place, onClose }) 
           <StarRating rating={place.rating || 0} />
         </div>
         {place.photos && place.photos.length > 0 && (
-          <div className="hidden sm:block">
+          <div className="hidden sm:flex items-center justify-center">
             <Zoom>
               <img
                 src={place.photos[0].getUrl({ maxWidth: 400, maxHeight: 400 })}

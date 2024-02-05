@@ -48,8 +48,8 @@ const PlacesComponent = () => {
   return (
     <div className="text-center mt-5 mr-7 ml-7">
       <div className="flex justify-center items-center mb-4">
-        <h2 className="text-white font-bold text-xl mr-2">Nearby Locations</h2>
-        <label className="ml-2 mr-2 text-white font-bold">Filter by:</label>
+        <h2 className="text-white font-playfair font-bold text-2xl mr-2">Nearby Locations |</h2>
+        <label className="mr-2 text-white text-xl font-bold font-playfair">Filter by:</label>
         <select
         onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
         value={state.filter || "all"} // Default filter = all
@@ -66,7 +66,7 @@ const PlacesComponent = () => {
       </div>
       {isLoaded ? (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mr-2 ml-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mr-2 ml-2 mt-10">
             {state.places.slice(0, state.displayedLocations).map((place) => (
               <div
                 key={place.place_id}
