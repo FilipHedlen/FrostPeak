@@ -46,7 +46,7 @@ const PlacesComponent = () => {
   }, [isLoaded, state.filter]);
 
   return (
-    <div className="text-center mt-5 mr-7 ml-7">
+    <div className="text-center mt-5 mr-7 ml-7 animate-fade-in-left">
       <div className="flex justify-center items-center mb-4">
         <h2 className="text-white font-playfair font-bold text-2xl mr-2">Nearby Locations |</h2>
         <label className="mr-2 text-white text-xl font-bold font-playfair">Filter by:</label>

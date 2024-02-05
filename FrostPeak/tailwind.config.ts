@@ -38,6 +38,7 @@ export default {
             "slide-in-top": "slide-in-top 0.8s ease-out",
             "slide-in-right": "slide-in-right 1s ease-out",
             "fade-in-left": "fade-in-left 0.6s ease-in-out",
+            "fade-in-bottom": "fade-in-bottom 0.6 ease-in-out",
         },
         keyframes: {
             "slide-in-top": {
@@ -66,6 +67,16 @@ export default {
                     transform: "translateX(0)"
                 },
             },
+            "fade-in-bottom": {
+                "0%": {
+                    opacity: "0",
+                    transform: "translateY(-200px)"
+                },
+                "100%": {
+                    opacity: "1",
+                    transform: "translateY(0)"
+                }
+            }
         } 
     },
   },
