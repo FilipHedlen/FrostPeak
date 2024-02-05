@@ -2,27 +2,29 @@ import SlopeIcon from "../SlopeIcons/SlopeIcon";
 
 const SlopeDifficulty = () => {
   return (
-    <div className="bg-white p-1 sm:p-2 mb-5 sm:mb-10 rounded-lg shadow-md max-w-40 mx-auto mt-5">
-      <p className="text-sm font-nunito font-bold place-self-center border-b-2 border-black mb-2">Marker explanation</p>
-      <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-green">
+    <div className="bg-white p-3 sm:p-6 mb-8 sm:mb-12 rounded-lg shadow-md max-w-md mx-auto mt-8 top-0">
+      <p className="text-base sm:text-lg font-nunito font-bold place-self-center border-b-2 border-black mb-4">
+        Marker explanation
+      </p>
+      <div className="flex items-center mb-2 sm:mb-4 pb-2 sm:pb-4 border-b-2 border-green">
         <SlopeIcon difficulty="very easy" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Very easy</p>
+        <p className="text-sm sm:text-base font-semibold ml-2">Very easy</p>
       </div>
-      <div className="flex items-center mb-1 sm:mb-2 border-blue border-b-2 pb-1 sm:pb-2">
+      <div className="flex items-center mb-2 sm:mb-4 border-blue border-b-2 pb-2 sm:pb-4">
         <SlopeIcon difficulty="easy" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Easy</p>
+        <p className="text-sm sm:text-base font-semibold ml-2">Easy</p>
       </div>
-      <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-red">
+      <div className="flex items-center mb-2 sm:mb-4 pb-2 sm:pb-4 border-b-2 border-red">
         <SlopeIcon difficulty="intermediate" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Intermediate</p>
+        <p className="text-sm sm:text-base font-semibold ml-2">Intermediate</p>
       </div>
-      <div className="flex items-center mb-1 sm:mb-2 pb-1 sm:pb-2 border-b-2 border-black">
+      <div className="flex items-center mb-2 sm:mb-4 pb-2 sm:pb-4 border-b-2 border-black">
         <SlopeIcon difficulty="difficult" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Difficult</p>
+        <p className="text-sm sm:text-base font-semibold ml-2">Difficult</p>
       </div>
       <div className="flex items-center">
         <SlopeIcon difficulty="very difficult" />
-        <p className="text-xs sm:text-sm font-semibold ml-1">Very difficult</p>
+        <p className="text-sm sm:text-base font-semibold ml-2">Very difficult</p>
       </div>
     </div>
   );

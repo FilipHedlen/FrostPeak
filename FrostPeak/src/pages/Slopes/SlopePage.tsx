@@ -6,7 +6,7 @@ import SlopeMap from "../../components/Slopes/SlopeMap/SlopeMap";
 
 const SlopePage = () => {
   return (
-    <div className="">
+    <div className="flex flex-col justify-center">
       <WeatherComponent />
       <SlopeDifficulty />
       <SlopeMap />
