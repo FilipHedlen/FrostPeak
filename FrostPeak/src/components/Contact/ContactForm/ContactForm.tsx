@@ -46,7 +46,6 @@ const ContactForm = () => {
                   placeholder="Your Name"
                 />
               </div>
-      
               <div className="mb-4">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
@@ -56,7 +55,6 @@ const ContactForm = () => {
                   placeholder="Email"
                 />
               </div>
-      
               <div className="mb-6">
                 <textarea
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"
@@ -66,10 +64,9 @@ const ContactForm = () => {
                   placeholder="Your Message"
                 />
               </div>
-      
               <div className="flex items-center justify-start">
                 <button
-                  className="bg-white hover:bg-lightgrey text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-nunito"
+                  className="flex max-w-sm sm:max-w-full bg-darkblue hover:bg-cherryred focus:outline-none text-white text-lg sm:text-xl font-bold shadow-md rounded-full mx-auto p-3 sm:p-3"
                   type="submit"
                 >
                   Send Message
