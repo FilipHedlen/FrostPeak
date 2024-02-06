@@ -14,35 +14,37 @@ global.matchMedia = jest.fn().mockImplementation(query => ({ // Simulate mobile 
   dispatchEvent: jest.fn(),
 }));
 
-test("Mobile nav menu toggles open and closed", () => {
-  render(
-    <MemoryRouter>
-      <MobileNavMenu />
-    </MemoryRouter>
-  );
-
-  // Menu should be initially closed
-  expect(screen.queryByText("Home")).not.toBeInTheDocument();
-
-  fireEvent.click(screen.getByRole("button"));
-
-  expect(screen.getByText("Home")).toBeInTheDocument();
-
-  fireEvent.click(screen.getByRole("button"));
-
-  expect(screen.queryByText("Home")).not.toBeInTheDocument();
-});
-
-test("Clicking menu link closes the menu", () => {
-  render(
-    <MemoryRouter>
-      <MobileNavMenu />
-    </MemoryRouter>
-  );
-
-  fireEvent.click(screen.getByRole("button"));
-
-  fireEvent.click(screen.getByText("Locations"));
-
-  expect(screen.queryByText("Home")).not.toBeInTheDocument();
+describe("MobileNavMenu component", () => {
+    test("toggles open and closed", () => {
+      render(
+        <MemoryRouter>
+          <MobileNavMenu />
+        </MemoryRouter>
+      );
+  
+      // Menu should be initially closed
+      expect(screen.queryByText("Home")).not.toBeInTheDocument();
+  
+      fireEvent.click(screen.getByRole("button"));
+  
+      expect(screen.getByText("Home")).toBeInTheDocument();
+  
+      fireEvent.click(screen.getByRole("button"));
+  
+      expect(screen.queryByText("Home")).not.toBeInTheDocument();
+    });
+  
+    test("closes the menu when clicking a link", () => {
+      render(
+        <MemoryRouter>
+          <MobileNavMenu />
+        </MemoryRouter>
+      );
+  
+      fireEvent.click(screen.getByRole("button"));
+  
+      fireEvent.click(screen.getByText("Locations"));
+  
+      expect(screen.queryByText("Home")).not.toBeInTheDocument();
+    });
 });
