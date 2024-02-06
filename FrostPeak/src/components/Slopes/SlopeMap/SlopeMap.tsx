@@ -3,7 +3,7 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 const SlopeMap = () => {
   return (
-      <div className="mb-10 ml-5 mr-5">
+      <div className="mb-10 ml-5 mr-5 animate-fade-in-left">
         <Zoom>
           <img
             src="/ramund-slopes.webp"

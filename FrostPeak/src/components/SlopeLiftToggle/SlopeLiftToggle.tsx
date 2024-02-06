@@ -12,14 +12,14 @@ const SlopeLiftToggle = () => {
   };
 
   return (
-    <div className="text-center mr-5 ml-5">
+    <div className="text-center mr-5 ml-5 animate-fade-in-left">
       <div className="flex justify-center">
         <button
           onClick={() => handleToggle("slopes")}
           className={`
             ${
-              selectedList === "slopes" ? "bg-white" : "bg-gray-400"
-            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-gray-700`}
+              selectedList === "slopes" ? "bg-white" : "bg-lightgrey"
+            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-grey`}
         >
             <p>
                 Slopes 
@@ -30,8 +30,8 @@ const SlopeLiftToggle = () => {
           onClick={() => handleToggle("lifts")}
           className={`
             ${
-              selectedList === "lifts" ? "bg-white" : "bg-gray-400"
-            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-gray-700`}
+              selectedList === "lifts" ? "bg-white" : "bg-lightgrey"
+            } w-48 px-6 py-3 text-xl cursor-pointer border-solid border-b-2 border-grey`}
         >
             <p>
                 Lifts
