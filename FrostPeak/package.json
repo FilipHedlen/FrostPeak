@@ -31,8 +31,10 @@
     "tsparticles": "^3.0.3"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.2.1",
     "@types/googlemaps": "^3.43.3",
-    "@types/jest": "^29.5.11",
+    "@types/jest": "^29.5.12",
+    "@types/jest-axe": "^3.5.9",
     "@types/node": "^20.11.13",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
