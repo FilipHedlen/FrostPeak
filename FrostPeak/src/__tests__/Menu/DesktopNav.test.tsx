@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import DesktopNavMenu from '../components/Menu/Desktop/DesktopNavMenu';
+import DesktopNavMenu from '../../components/Menu/Desktop/DesktopNavMenu';
 
 describe('DesktopNavMenu component', () => {
   test("renders links correctly", () => {

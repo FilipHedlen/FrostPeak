@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import MobileNavMenu from '../components/Menu/Mobile/MobileNavMenu';
+import MobileNavMenu from '../../components/Menu/Mobile/MobileNavMenu';
 
 global.matchMedia = jest.fn().mockImplementation(query => ({ // Simulate mobile viewport
   matches: true,
