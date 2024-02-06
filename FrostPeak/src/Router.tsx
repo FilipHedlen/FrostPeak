@@ -6,6 +6,7 @@ import LocationsPage from "./pages/Locations/LocationsPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import SlopePage  from "./pages/Slopes/SlopePage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
+import CookiePopup from "./components/Cookies/CookiePopup";
 
 export const Router = createBrowserRouter([
   {
@@ -15,7 +16,12 @@ export const Router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />,
+        element: (
+            <>
+              <HomePage />
+              <CookiePopup />
+            </>
+          ),
         index: true,
       },
       {
