@@ -47,13 +47,13 @@ const PlacesComponent = () => {
 
   return (
     <div className="text-center mt-5 mr-7 ml-7 animate-fade-in-left">
-      <div className="flex justify-center items-center mb-4">
-        <h2 className="text-white font-playfair font-bold text-2xl mr-2">Nearby Locations |</h2>
-        <label className="mr-2 text-white text-xl font-bold font-playfair">Filter by:</label>
+      <h2 className="text-white font-playfair font-bold text-5xl mb-20 underline">Nearby Locations</h2>
+      <div className="flex flex-col items-center mb-4"> 
+        <label className="mr-2 text-white text-xl font-bold font-playfair mb-2">Filter by:</label>
         <select
-        onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
-        value={state.filter || "all"} // Default filter = all
-        className="p-2 border-gray-300 rounded"
+          onChange={(e) => dispatch({ type: ActionType.SET_FILTER, payload: e.target.value })}
+          value={state.filter || "all"} // Default filter = all
+          className="p-2 border-gray-300 rounded"
         >
           <option value="all">All</option>
           <option value="lodging">Lodging</option>
