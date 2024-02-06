@@ -1,6 +1,6 @@
 import ContactFAQ from '../../components/Contact/ContactFAQ/ContactFAQ'
 import ContactForm from '../../components/Contact/ContactForm/ContactForm'
-import ContactSection from '../../components/Contact/ContactSection/ContactSection'
+import ContactSection from '../../components/Contact/ContactInfo/ContactInfo'
 
 const ContactPage = () => {
   return (

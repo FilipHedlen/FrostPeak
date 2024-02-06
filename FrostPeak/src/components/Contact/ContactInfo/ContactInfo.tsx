@@ -1,4 +1,4 @@
-const ContactSection = () => {
+const ContactInfo= () => {
     return (
       <div className="flex flex-col mx-8 my-16 text-white animate-slide-in-right">
         <h3 className="text-2xl sm:text-3xl font-bold mb-4 font-playfair underline">Contact Information</h3>
@@ -11,4 +11,4 @@ const ContactSection = () => {
     );
 };
 
-export default ContactSection;
+export default ContactInfo;
