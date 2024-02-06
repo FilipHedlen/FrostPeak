@@ -27,7 +27,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div>
+        <div className="w-full sm:w-[90%] max-w-lg mx-8 my-16 animate-slide-in-top">
           {isMailSent ? 
             <div className="bg-transparent mx-auto p-4 mb-4 width flex justify-center w-[50%]">
               <h3 className="text-2xl font-playfair text-white">
@@ -35,8 +35,8 @@ const ContactForm = () => {
               </h3>
             </div>
            : (
-            <form className="w-[90%] max-w-lg mx-auto my-8 animate-slide-in-top" onSubmit={handleSubmit}>
-              <h3 className="text-2xl font-bold mb-4 font-playfair text-white underline">Contact form</h3>
+            <form onSubmit={handleSubmit}>
+              <h3 className="text-3xl font-bold mb-4 font-playfair text-white underline">Contact Form</h3>
               <div className="mb-4">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-lightgrey leading-tight focus:outline-none focus:shadow-outline"

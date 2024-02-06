@@ -4,12 +4,12 @@ import ContactSection from '../../components/Contact/ContactSection/ContactSecti
 
 const ContactPage = () => {
   return (
-    <div>
+    <div className="flex flex-row flex-wrap sm:justify-center lg:justify-around">
         <ContactSection />
-        <ContactForm />
         <ContactFAQ />
+        <ContactForm />
     </div>
   )
 }
 
-export default ContactPage
+export default ContactPage;
