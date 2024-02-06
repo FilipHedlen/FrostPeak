@@ -34,9 +34,10 @@ const TodaySection = () => {
           </p>
           <Zoom>
             <img
-              src="/ramund-2.jpg"
+              src="/ramund-view.webp"
               alt="Image of Ramundberget on a sunny day"
               className="rounded-md w-60 md:w-80 h-auto mx-auto m-6"
+              loading="lazy"
             />
           </Zoom>
         </article>

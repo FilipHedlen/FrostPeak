@@ -28,9 +28,10 @@ const HistorySection = () => {
           </p>
           <Zoom>
             <img
-              src="/ramund-family.jpeg"
+              src="/ramund-family.webp"
               alt="Ramundbergets founders family picture"
               className="rounded-md w-30 md:w-80 h-auto mx-auto m-6"
+              loading="lazy"
             />
           </Zoom>
         </article>

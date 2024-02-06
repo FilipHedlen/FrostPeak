@@ -6,9 +6,10 @@ const SlopeMap = () => {
       <div className="mb-10 ml-5 mr-5">
         <Zoom>
           <img
-            src="/ramund-slopes.jpg"
+            src="/ramund-slopes.webp"
             alt="Ramundbergets ski slope map"
             className="rounded-md md:w-[50%] sm:w-[80%] h-auto mx-auto"
+            loading="lazy"
           />
         </Zoom>
     </div>
