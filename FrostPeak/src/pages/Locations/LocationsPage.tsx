@@ -1,11 +1,12 @@
 //import MapContainer from "../../components/Map/MapComponent"
 import PlacesComponent from "../../components/Places/PlacesComponent"
 
-export const LocationsPage = () => {
+const LocationsPage = () => {
   return (
     <div>
-        {/*<MapContainer />*/}
         <PlacesComponent />
     </div>
   )
 }
+
+export default LocationsPage;

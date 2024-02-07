@@ -1,7 +1,13 @@
-import React from 'react'
+import HistorySection from '../../components/History/HistorySection/HistorySection'
+import TodaySection from '../../components/History/TodaySection/TodaySection';
 
-export const InformationPage = () => {
+const InformationPage = () => {
   return (
-    <div>InformationPage</div>
+    <div>
+        <HistorySection />
+        <TodaySection />
+    </div>
   )
 }
+
+export default InformationPage;
