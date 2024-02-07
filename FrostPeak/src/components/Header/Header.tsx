@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
-import NavMenu from '../NavMenu/NavMenu';
+import MobileNavMenu from '../Menu/Mobile/MobileNavMenu';
+import DesktopNavMenu from '../Menu/Desktop/DesktopNavMenu';
 
 const Header = () => {
   return (
-    <header className="bg-blue text-white font-bold sticky p-4 top-0 z-10 w-full">
+    <header className="bg-darkblue text-white font-bold sticky p-4 top-0 z-10 w-full">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/">
             <img src="/logo.png" alt="Logo" className="" />
         </Link>
-        <NavMenu />
+        <MobileNavMenu />
+        <DesktopNavMenu />
       </div>
     </header>
   );

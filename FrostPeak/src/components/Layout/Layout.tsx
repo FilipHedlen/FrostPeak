@@ -8,7 +8,7 @@ const Layout = () => {
       <>
         <AnimatedBackground />
         <Header />
-        <main className="relative mb-20 mt-10">
+        <main className="relative mb-20">
          <Outlet />
         </main>
         <Footer />

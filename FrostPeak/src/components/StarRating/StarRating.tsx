@@ -10,15 +10,15 @@ const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
   const emptyStars = 5 - fullStars - halfStar;
 
   return (
-    <div className="flex">
+    <div className="flex justify-center">
       {[...Array(fullStars)].map((_, index) => (
-        <span key={index} className="text-yellow-500">
+        <span key={index} className="text-gold">
           ★
         </span>
       ))}
-      {halfStar > 0 && <span className="text-yellow-500">★</span>}
+      {halfStar > 0 && <span className="text-gold">★</span>}
       {[...Array(emptyStars)].map((_, index) => (
-        <span key={index} className="text-gray-300">
+        <span key={index} className="text-lightgrey">
           ★
         </span>
       ))}

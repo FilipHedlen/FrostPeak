@@ -1,7 +1,7 @@
 import HistorySection from '../../components/History/HistorySection/HistorySection'
 import TodaySection from '../../components/History/TodaySection/TodaySection';
 
-const InformationPage = () => {
+const AboutUsPage = () => {
   return (
     <div>
         <HistorySection />
@@ -10,4 +10,4 @@ const InformationPage = () => {
   )
 }
 
-export default InformationPage;
+export default AboutUsPage;

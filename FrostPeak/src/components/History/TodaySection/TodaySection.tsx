@@ -1,47 +1,11 @@
-import { useEffect, useState, useRef } from 'react';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 
 const TodaySection = () => {
-    const [isAnimated, setIsAnimated] = useState(false); // For the section only to appear when scrolling down
-    const sectionRef = useRef(null); // Created a reference to the section element
-  
-    useEffect(() => {
-      const options = {
-        root: null, // Use the viewport as the root
-        rootMargin: '0px',
-        threshold: 0.5, // Only trigger when 50% of the section is visible
-      };
-  
-      const observer = new IntersectionObserver((entries) => { // The observer is set to stop observing when the section becomes visible
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsAnimated(true);
-            observer.disconnect();
-          }
-        });
-      }, options);
-  
-      const currentSectionRef = sectionRef.current;
-  
-      if (currentSectionRef) {
-        observer.observe(currentSectionRef);
-      }
-  
-      return () => {
-        if (currentSectionRef) {
-          observer.unobserve(currentSectionRef);
-        }
-      };
-    }, []);
-
   return (
     <div className="container mx-auto p-8">
       <section
-        ref={sectionRef}
-        className={`bg-white shadow-lg p-6 mb-8 transition-all duration-2000 ease-in-out transform rounded-md ${
-            isAnimated ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-        }`}
+        className="bg-white shadow-lg p-6 mb-8 rounded-md animate-slide-in-right"
       >
         <article>
           <h2 className="text-2xl font-playfair font-semibold mb-4 text-black">Ramundberget today</h2>
