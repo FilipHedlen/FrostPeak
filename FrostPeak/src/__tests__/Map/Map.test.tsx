@@ -5,7 +5,7 @@ import MapContainer from "../../components/Map/MapComponent";
 // Mock the GoogleMap component
 jest.mock("@react-google-maps/api", () => ({
     __esModule: true,
-    GoogleMap: () => <div data-testid="google-map"></div>, // Mock GoogleMap to render a div
+    GoogleMap: () => <div data-testid="google-map"></div>
   }));
   
   // Mock the useGoogleMaps hook
