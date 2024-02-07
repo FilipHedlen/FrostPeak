@@ -12,7 +12,7 @@ const SlopeLiftToggle = () => {
   };
 
   return (
-    <div className="text-center mr-5 ml-5 animate-fade-in-left">
+    <div className="text-center mt-24 mr-5 ml-5 animate-fade-in-left">
       <div className="flex justify-center">
         <button
           onClick={() => handleToggle("slopes")}

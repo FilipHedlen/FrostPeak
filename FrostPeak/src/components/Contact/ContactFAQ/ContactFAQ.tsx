@@ -20,7 +20,7 @@ const ContactFAQ = () => {
       {faqData.map((faq, index) => (
         <div key={index} className="mb-4">
           <div
-            className="cursor-pointer text-white hover:text-black font-poppins mb-2 font-bold"
+            className="cursor-pointer text-white hover:text-black font-poppins mb-2 font-medium"
             onClick={() => handleOpenAnswer(index)}
           >
             {faq.question}
