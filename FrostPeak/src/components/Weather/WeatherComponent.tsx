@@ -20,7 +20,7 @@ const WeatherComponent = () => {
     }, []);
 
   return (
-    <div className="bg-white shadow-lg sm:w-[70%] md:w-[50%] lg:w-[20%] p-2 rounded-md font-poppins m-5">
+    <div className="bg-white shadow-lg p-2 h-[100%] rounded-md font-poppins m-10 animate-fade-in-left">
       {weatherInfo && (
         <div className="flex flex-col">
           <h2 className="font-bold text-grey mb-4 text-3xl">

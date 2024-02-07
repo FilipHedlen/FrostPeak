@@ -8,7 +8,7 @@ import {
 import { particleOptions } from "../../config/backgroundConfig";
 
 const AnimatedBackground = () => {
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false); // See https://github.com/tsparticles/react/#readme
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {

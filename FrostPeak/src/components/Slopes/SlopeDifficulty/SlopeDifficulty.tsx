@@ -2,7 +2,7 @@ import SlopeIcon from "../SlopeIcons/SlopeIcon";
 
 const SlopeDifficulty = () => {
   return (
-    <div className="bg-white p-3 sm:p-6 mb-8 sm:mb-12 rounded-lg shadow-md max-w-md mx-auto mt-8">
+    <div className="bg-white p-3 sm:p-6 m-10 rounded-lg shadow-md max-w-md animate-fade-in-left">
       <p className="text-base sm:text-lg font-nunito font-bold place-self-center border-b-2 border-black mb-4">
         Marker explanation
       </p>

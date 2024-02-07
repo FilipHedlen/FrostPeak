@@ -6,13 +6,13 @@ import SlopeMap from "../../components/Slopes/SlopeMap/SlopeMap";
 
 const SlopePage = () => {
     return (
-      <div className="flex flex-col items-center justify-center p-4">
-        <WeatherComponent />
-        <div className="w-full max-w-screen-lg mt-4">
+      <div className="flex flex-col items-around justify-around p-4">
+        <div className="flex flex-wrap justify-center gap-2 w-full">
+          <WeatherComponent />
+          <SlopeMap />
           <SlopeDifficulty />
         </div>
-          <SlopeMap />
-          <SlopeLiftToggle />
+        <SlopeLiftToggle />
       </div>
     );
 };
