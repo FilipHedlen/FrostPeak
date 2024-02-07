@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/Layout/Layout"; 
 import HomePage from "./pages/Home/HomePage";
-import { ContactPage } from "./pages/Contact/ContactPage";
+import ContactPage from "./pages/Contact/ContactPage";
 import LocationsPage from "./pages/Locations/LocationsPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import SlopePage  from "./pages/Slopes/SlopePage";
